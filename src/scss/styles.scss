@@ -1,0 +1,321 @@
+@import "components/block-filter";
+@import "components/legend";
+@import "components/slide-checkbox";
+@import "components/dropdown";
+
+
+agm-map {
+  height: 80vh;
+}
+
+.google-map{
+
+}
+
+.terminal-coin-prices{
+  .info-row {
+    display: grid;
+    grid-template-columns: 12em 16em;
+
+    .label {
+      font-weight: bold;
+    }
+  }
+
+}
+
+.terminal-info{
+  .info-row {
+    display: grid;
+    grid-template-columns: 12em 16em;
+
+    .label {
+      font-weight: bold;
+    }
+  }
+
+}
+
+.terminal-limits{
+  .info-row {
+    display: grid;
+    grid-template-columns: 12em 16em;
+
+    .label {
+      font-weight: bold;
+    }
+  }
+
+}
+
+.terminal-filter-form {
+
+  .rangeSlider {
+    width: 100%; /* Width of the outside container */
+    .label-group {
+      display: flex;
+      justify-content: left;
+
+      .label {
+        display: block;
+        white-space: nowrap;
+      }
+
+      .ui-dropdown {
+        width: 4em;
+        min-width: 4em;
+        margin-top: -4px;
+      }
+
+
+    }
+  }
+
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+}
+
+
+.map-block {
+  display: flex;
+
+  .google-map {
+    flex: 4;
+  }
+
+  .terminal-filter-form {
+    flex: 1;
+  }
+}
+
+
+@media (max-width: 979px) {
+
+
+
+  .ui-dropdown-items-wrapper {
+    background-color: #fff;
+  }
+
+  .inputInline__button {
+    font-size: 14px;
+    width: 85px;
+  }
+}
+
+.inputInline {
+  position: relative;
+}
+
+.inputInline__input {
+  width: 270px;
+  box-sizing: border-box;
+  border-radius: 23px;
+  border: 1px solid #23c861;
+  background-color: #fff;
+  padding: 14px 30px 16px;
+  padding-right: 35px;
+  color: #202020;
+  line-height: 1;
+  font-size: 14px;
+}
+
+@media (max-width: 1440px) {
+
+  .inputInline__input {
+    width: 240px;
+    font-size: 14px;
+    padding-left: 15px;
+    padding-right: 35px;
+  }
+}
+
+.inputInline__input::-webkit-input-placeholder {
+  opacity: 0.4;
+  color: #012238;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.inputInline__input::-moz-placeholder {
+  opacity: 0.4;
+  color: #012238;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.inputInline__input:-ms-input-placeholder {
+  opacity: 0.4;
+  color: #012238;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.inputInline__input::placeholder {
+  opacity: 0.4;
+  color: #012238;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.inputInline__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.inputInline__button {
+  width: 65px;
+  border-radius: 0 23px 23px 0;
+  box-sizing: border-box;
+  background-color: #23c861;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 16px;
+}
+
+form input {
+  width: 100%;
+  box-sizing: border-box;
+  color: #202020;
+}
+
+form textarea {
+  color: #202020;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+  padding: 19px 25px;
+  min-height: 60px;
+  font-size: 16px;
+  border: 1px solid #e6e6e6;
+  border-radius: 17px;
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form select,
+  form textarea {
+    font-size: 14px;
+    min-height: 50px;
+  }
+}
+
+form .form-item,
+form .form-actions {
+  margin: 0;
+}
+
+form textarea {
+  resize: none;
+}
+
+.formTitle {
+  margin-bottom: 20px;
+  font-weight: 200;
+  line-height: 1.15;
+}
+
+#map {
+  width: 100%;
+  height: 670px;
+}
+
+@media (max-width: 1440px) {
+
+  #map {
+    height: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  #map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 479px) {
+
+  #map {
+    height: 450px;
+  }
+}
+
+a {
+  color: #387baf;
+  text-decoration: underline;
+  text-decoration-color: rgba(56, 123, 175, 0.3);
+}
+
+terminal-info {
+  .field {
+    padding-top: .5em;
+  }
+
+  .field__label, .field__item {
+    display: inline;
+  }
+
+  .field__label {
+    color: #555;
+    text-transform: capitalize;
+  }
+
+  .field__label:after {
+    content: ':';
+  }
+
+  .field_item {
+    color: #55a;
+  }
+
+  h4 {
+    margin: 0
+  }
+}

@@ -1,0 +1,4522 @@
+[
+		{
+		"id": "350",
+		"name": "Mike's Diary & Deli",
+		"is_enabled": "true",
+		"last_seen": "1539288518523",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.4104949999999974",
+				"longitude": "-74.0391149999999953",
+				"country": "USA",
+				"city": "Atlantic Highlands",
+				"street": "160 1st Avenue, Atlantic Highlands, NJ 07716"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									},
+								"sell":
+			{
+
+									}
+
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "287",
+		"name": "Sunny Mart Food Store & Deli Avenel",
+		"is_enabled": "true",
+		"last_seen": "1539288608465",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.5823460000000011",
+				"longitude": "-74.2676050000000032",
+				"country": "USA",
+				"city": "Avenel",
+				"street": "1182 Rahway Ave, Avenel, NJ 07001"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "316",
+		"name": "Krauszer's Convenience Store",
+		"is_enabled": "true",
+		"last_seen": "1539288494852",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.665498999999997",
+				"longitude": "-74.5793649999999957",
+				"country": "USA",
+				"city": "Basking Ridge",
+				"street": "21 Church St, Basking Ridge, NJ 07920"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "372",
+		"name": "Krauszer's Food Store",
+		"is_enabled": "true",
+		"last_seen": "1539288495729",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.4666440000000023",
+				"longitude": "-74.6802129999999948",
+				"country": "USA",
+				"city": "Belle Mead",
+				"street": "2162 US-206, Belle Mead, NJ 08502"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "343",
+		"name": "Krauszer's Food Store",
+		"is_enabled": "true",
+		"last_seen": "1539288641100",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.5673829999999995",
+				"longitude": "-74.5429249999999968",
+				"country": "USA",
+				"city": "Bound Brook",
+				"street": "310 West union avenue,  Bound Brook,  NJ 08805"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "342",
+		"name": "Country Farm",
+		"is_enabled": "true",
+		"last_seen": "1539288513934",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.2000349999999997",
+				"longitude": "-74.019094999999993",
+				"country": "USA",
+				"city": "Bradley Beach",
+				"street": "125 Main St, Bradley Beach, NJ 07720"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "379",
+		"name": "Pantry Farm Food Store",
+		"is_enabled": "true",
+		"last_seen": "1539288658237",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.0755169999999978",
+				"longitude": "-74.1048629999999946",
+				"country": "USA",
+				"city": "Brick",
+				"street": "2085 Route 88, Brick,  NJ 08724"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "337",
+		"name": "Speedy Mart Welsh Farm",
+		"is_enabled": "true",
+		"last_seen": "1539288547030",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.5601240000000018",
+				"longitude": "-74.6493320000000011",
+				"country": "USA",
+				"city": "Bridgewater",
+				"street": "17 Old York Rd, Bridgewater, NJ 08807"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "331",
+		"name": "One Stop Supermarket",
+		"is_enabled": "true",
+		"last_seen": "1539288507923",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7682009999999977",
+				"longitude": "-74.2224420000000009",
+				"country": "USA",
+				"city": "City of Orange",
+				"street": "50 Main Street, City of Orange, NJ 07050"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "355",
+		"name": "Pantry 1 Food Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288523757",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.6069430000000011",
+				"longitude": "-74.3228529999999949",
+				"country": "USA",
+				"city": "Colonia",
+				"street": "440 Lake Ave, Colonia, NJ 07067"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "280",
+		"name": "Welsh Farms",
+		"is_enabled": "true",
+		"last_seen": "1539288608478",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.5994150000000005",
+				"longitude": "-74.3166570000000064",
+				"country": "USA",
+				"city": "Colonia",
+				"street": "329 Inman Avenue,Colonia,NJ 07067"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "341",
+		"name": "Krauszers Food Stores",
+		"is_enabled": "true",
+		"last_seen": "1539288614662",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.885781999999999",
+				"longitude": "-74.5602020000000039",
+				"country": "USA",
+				"city": "Dover",
+				"street": "45 N Warren St, Dover, NJ 07801"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "334",
+		"name": "Boost Mobile",
+		"is_enabled": "true",
+		"last_seen": "1539288517001",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7562840000000008",
+				"longitude": "-74.2337650000000053",
+				"country": "USA",
+				"city": "East Orange",
+				"street": "22 South Harrison Street, East Orange, NJ 07018"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "332",
+		"name": "Boost Mobile 2",
+		"is_enabled": "true",
+		"last_seen": "1539288529803",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.750906999999998",
+				"longitude": "-74.2041559999999976",
+				"country": "USA",
+				"city": "East Orange",
+				"street": "47 Central Avenue, East Orange, NJ 07018"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "278",
+		"name": "Ugo wireless and electronics",
+		"is_enabled": "true",
+		"last_seen": "1539288525953",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7848029999999966",
+				"longitude": "-74.2011949999999985",
+				"country": "USA",
+				"city": "East Orange",
+				"street": "491 Central Ave, East Orange, NJ 07018"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "301",
+		"name": "Krauszer's Food Store",
+		"is_enabled": "true",
+		"last_seen": "1539288517111",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.5249620000000021",
+				"longitude": "-74.4134030000000024",
+				"country": "USA",
+				"city": "Edison",
+				"street": "4 Brunswick Ave, Edison, NJ 08817"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "267",
+		"name": "Mundo Latino Envios De Carga Y Dinero",
+		"is_enabled": "true",
+		"last_seen": "1539288613474",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.5125439999999983",
+				"longitude": "-74.4021180000000015",
+				"country": "USA",
+				"city": "Edison",
+				"street": "227 Plainfield Avenue, Edison, NJ 08817"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "430",
+		"name": "Quick Stop",
+		"is_enabled": "true",
+		"last_seen": "1539288628010",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.5976039999999969",
+				"longitude": "-74.351105000000004",
+				"country": "USA",
+				"city": "Edison",
+				"street": "940 Inman Ave,  Edison,  NJ 08820"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "275",
+		"name": "Delta Gas Station",
+		"is_enabled": "true",
+		"last_seen": "1539288555189",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.6762500000000031",
+				"longitude": "-74.1985549999999989",
+				"country": "USA",
+				"city": "Elizabeth",
+				"street": "714 Spring street, Elizabeth, NJ 07201"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "293",
+		"name": "Magnolia Super Market",
+		"is_enabled": "true",
+		"last_seen": "1539288631129",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.6689229999999995",
+				"longitude": "-74.2102679999999992",
+				"country": "USA",
+				"city": "Elizabeth",
+				"street": "323 Jefferson Avenue,Elizabeth, NJ 07201"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "276",
+		"name": "News Express",
+		"is_enabled": "true",
+		"last_seen": "1538842944782",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.6667380000000023",
+				"longitude": "-74.2149169999999998",
+				"country": "USA",
+				"city": "Elizabeth",
+				"street": "211 Broad St, Elizabeth, NJ 07201"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "377",
+		"name": "Express 76",
+		"is_enabled": "true",
+		"last_seen": "1539288648676",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.3469079999999991",
+				"longitude": "-74.3080520000000035",
+				"country": "USA",
+				"city": "Englishtown",
+				"street": "46 U.S. 9, Englishtown, NJ 07726"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "380",
+		"name": "Pantry 1 Food Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288557943",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.3143809999999974",
+				"longitude": "-74.3040589999999952",
+				"country": "USA",
+				"city": "Englishtown",
+				"street": "364 U.S. 9, Englishtown, NJ 07726"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "312",
+		"name": "Krauszer's Food Store",
+		"is_enabled": "true",
+		"last_seen": "1539288523383",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.3620990000000006",
+				"longitude": "-74.0412369999999953",
+				"country": "USA",
+				"city": "Fair Haven",
+				"street": "617 River Rd, Fair Haven, NJ 07704"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "361",
+		"name": "Pantry1 Food Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288610796",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.5736210000000028",
+				"longitude": "-74.8242570000000029",
+				"country": "USA",
+				"city": "Folsom",
+				"street": "1400 E Black Horse Pike, Folsom, NJ 08037"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "330",
+		"name": "6-12 Food Store",
+		"is_enabled": "true",
+		"last_seen": "1539288597146",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.260232000000002",
+				"longitude": "-74.2782600000000031",
+				"country": "USA",
+				"city": "Freehold",
+				"street": "21 Broad Street, Freehold, NJ 07728"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "299",
+		"name": "Molly Pitcher Exxon",
+		"is_enabled": "true",
+		"last_seen": "1539288518969",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.2745609999999985",
+				"longitude": "-74.2931810000000041",
+				"country": "USA",
+				"city": "Freehold",
+				"street": "4211 U.S. 9, Freehold, NJ 07728"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "370",
+		"name": "Jack Country Farm",
+		"is_enabled": "true",
+		"last_seen": "1539288606373",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.8454849999999965",
+				"longitude": "-75.0660270000000054",
+				"country": "USA",
+				"city": "Glendora",
+				"street": "260 East Evesham Road,  Glendora,  NJ 08029"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "428",
+		"name": "Pantry 1 Food Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288639849",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.842846999999999",
+				"longitude": "-75.0704379999999958",
+				"country": "USA",
+				"city": "Glendora",
+				"street": "1204 N Black Horse Pike,  Glendora,  NJ 08029"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "363",
+		"name": "CITGO Haddon Township",
+		"is_enabled": "true",
+		"last_seen": "1539288561867",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.8939400000000006",
+				"longitude": "-75.1023600000000044",
+				"country": "USA",
+				"city": "Haddon Township",
+				"street": "501 U.S. 130, Haddon Township, NJ 08059"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "351",
+		"name": "Krauszers Food Store",
+		"is_enabled": "true",
+		"last_seen": "1539288607489",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.4296819999999997",
+				"longitude": "-74.132829000000001",
+				"country": "USA",
+				"city": "Hazlet",
+				"street": "595 Palmer Avenue, Hazlet, NJ 07734"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "382",
+		"name": "Gulf Gas Station",
+		"is_enabled": "true",
+		"last_seen": "1539288593122",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.6988640000000004",
+				"longitude": "-74.2381709999999941",
+				"country": "USA",
+				"city": "Hillside",
+				"street": "440 US-22, Hillside, NJ 07205"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "366",
+		"name": "Cluck U Chicken",
+		"is_enabled": "true",
+		"last_seen": "1539288641177",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7379790000000028",
+				"longitude": "-74.0309790000000021",
+				"country": "USA",
+				"city": "Hoboken",
+				"street": "112 Washington St, Hoboken, NJ 07030"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "371",
+		"name": "Hoboken News",
+		"is_enabled": "true",
+		"last_seen": "1539288567186",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7423560000000009",
+				"longitude": "-74.0296869999999956",
+				"country": "USA",
+				"city": "Hoboken",
+				"street": "500 Washington St, Hoboken, NJ 07030"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "424",
+		"name": "LUKOIL Gas Station",
+		"is_enabled": "true",
+		"last_seen": "1539288601241",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.1754129999999989",
+				"longitude": "-74.2428539999999941",
+				"country": "USA",
+				"city": "Howell",
+				"street": "2510 U.S. 9, Howell, NJ 07731"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "349",
+		"name": "Circle Convenience Store",
+		"is_enabled": "true",
+		"last_seen": "1539288572130",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7149849999999986",
+				"longitude": "-74.2518050000000045",
+				"country": "USA",
+				"city": "Irvington",
+				"street": "1085 Stuyvesant Avenue, Irvington, NJ 07111"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "285",
+		"name": "KAM's DELI & Grocery",
+		"is_enabled": "true",
+		"last_seen": "1539288650496",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7155040000000028",
+				"longitude": "-74.2525129999999933",
+				"country": "USA",
+				"city": "Irvington",
+				"street": "287 40th Street, Irvington, NJ 07111"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "266",
+		"name": "Star Electronics",
+		"is_enabled": "true",
+		"last_seen": "1539288603687",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7256849999999986",
+				"longitude": "-74.2320220000000006",
+				"country": "USA",
+				"city": "Irvington",
+				"street": "1069 B Springfield Ave, Irvington, NJ 07111"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "313",
+		"name": "Lucky 7 Deli",
+		"is_enabled": "true",
+		"last_seen": "1539288575664",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.0688650000000024",
+				"longitude": "-74.2719850000000008",
+				"country": "USA",
+				"city": "Jackson",
+				"street": "305 Whitesville Road,  Jackson,  NJ 08527"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "367",
+		"name": "One Stop Shop of Jackson",
+		"is_enabled": "true",
+		"last_seen": "1539288558317",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.0707769999999996",
+				"longitude": "-74.3724189999999936",
+				"country": "USA",
+				"city": "Jackson",
+				"street": "580 Toms River Rd, Jackson, NJ 08527"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "315",
+		"name": "BP Gas Station",
+		"is_enabled": "true",
+		"last_seen": "1539288556239",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.3531019999999998",
+				"longitude": "-74.4428230000000042",
+				"country": "USA",
+				"city": "Jamesburg",
+				"street": "232 Gatzmer Ave, Jamesburg, NJ 08831"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "410",
+		"name": "Exxon Gas Station",
+		"is_enabled": "true",
+		"last_seen": "1539288604295",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7006969999999981",
+				"longitude": "-74.0943579999999997",
+				"country": "USA",
+				"city": "Jersey city",
+				"street": "1737 John F. Kennedy Blvd, Jersey City, NJ 07305"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "374",
+		"name": "Midland Dairy",
+		"is_enabled": "true",
+		"last_seen": "1539288585151",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7688539999999975",
+				"longitude": "-74.1417730000000006",
+				"country": "USA",
+				"city": "Kearny",
+				"street": "170 Midland Ave,  Kearny,  NJ 07032"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "391",
+		"name": "Speedy Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288652545",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.9794569999999965",
+				"longitude": "-74.6059809999999999",
+				"country": "USA",
+				"city": "Lake Hopatcong",
+				"street": "56 NJ-181, Lake Hopatcong, NJ 07849"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "354",
+		"name": "Exxon  Gas Station Lakehurst",
+		"is_enabled": "true",
+		"last_seen": "1539288567828",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.9969060000000027",
+				"longitude": "-74.2796850000000006",
+				"country": "USA",
+				"city": "Lakehurst",
+				"street": "1 Commonwealth Blvd, Lakehurst, NJ 08759"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "288",
+		"name": "Krauszer's foodmart",
+		"is_enabled": "true",
+		"last_seen": "1539288616761",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.6249109999999973",
+				"longitude": "-74.2414919999999938",
+				"country": "USA",
+				"city": "Linden",
+				"street": "1114 S Wood avenue, Linden, NJ 07036"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "302",
+		"name": "Welsh Farms",
+		"is_enabled": "true",
+		"last_seen": "1539288521901",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.3071520000000021",
+				"longitude": "-74.0001019999999983",
+				"country": "USA",
+				"city": "Long Branch",
+				"street": "492 Joline Ave, Long Branch, NJ 07740"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "423",
+		"name": "Manalapan Exxon",
+		"is_enabled": "true",
+		"last_seen": "1539288642651",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.3030860000000004",
+				"longitude": "-74.3032829999999933",
+				"country": "USA",
+				"city": "Manalapan Township",
+				"street": "208 U.S. 9, Manalapan Township, NJ 07726"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "310",
+		"name": "7-Eleven Store",
+		"is_enabled": "true",
+		"last_seen": "1539288658602",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.9381879999999967",
+				"longitude": "-74.9700799999999958",
+				"country": "USA",
+				"city": "Maple Shade",
+				"street": "2802 Route 73, Maple Shade Township, NJ 08052"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "294",
+		"name": "D&F Payment Center",
+		"is_enabled": "true",
+		"last_seen": "1539288590658",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.8117429999999999",
+				"longitude": "-74.2151250000000005",
+				"country": "USA",
+				"city": "Montclair",
+				"street": "340 Bloomfield Ave, Montclair, NJ 07042"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "422",
+		"name": "Exxon",
+		"is_enabled": "true",
+		"last_seen": "1539288637165",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.8101219999999998",
+				"longitude": "-74.213357000000002",
+				"country": "USA",
+				"city": "Montclair",
+				"street": "264 Bloomfield Ave,  Montclair,  NJ 07042"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "296",
+		"name": "Krauszer's Food Store 150",
+		"is_enabled": "true",
+		"last_seen": "1539288569718",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.8237409999999983",
+				"longitude": "-74.2194719999999961",
+				"country": "USA",
+				"city": "Montclair",
+				"street": "150 Valley Road, Montclair, NJ 07042"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "383",
+		"name": "Gene's II Deli",
+		"is_enabled": "true",
+		"last_seen": "1539288552549",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.819507999999999",
+				"longitude": "-74.4819789999999955",
+				"country": "USA",
+				"city": "Morris Plains",
+				"street": "163 Speedwell Ave, Morris Plains, NJ 07950"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "295",
+		"name": "Interstate News",
+		"is_enabled": "true",
+		"last_seen": "1539272572207",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7997140000000016",
+				"longitude": "-74.4813120000000026",
+				"country": "USA",
+				"city": "Morristown",
+				"street": "41 Headquarters Plaza, Morristown, NJ 07960"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "338",
+		"name": "Little Brown Jug Convenience",
+		"is_enabled": "true",
+		"last_seen": "1539288609571",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.2067309999999978",
+				"longitude": "-74.0435070000000053",
+				"country": "USA",
+				"city": "Neptune City",
+				"street": "2040 Highway 33, Neptune City, NJ 07753"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "365",
+		"name": "Checks & More",
+		"is_enabled": "true",
+		"last_seen": "1539288659688",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7190030000000007",
+				"longitude": "-74.1618739999999974",
+				"country": "USA",
+				"city": "Newark",
+				"street": "386 South St, Newark, NJ 07105"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "364",
+		"name": "LUKOIL",
+		"is_enabled": "true",
+		"last_seen": "1539288646454",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7192739999999986",
+				"longitude": "-74.1811969999999974",
+				"country": "USA",
+				"city": "Newark",
+				"street": "335 McCarter Hwy, Newark, NJ 07114"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "304",
+		"name": "Micro City Wireless & Electronics",
+		"is_enabled": "true",
+		"last_seen": "1539288550803",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7296249999999986",
+				"longitude": "-74.1589730000000031",
+				"country": "USA",
+				"city": "Newark",
+				"street": "146 A Ferry Street, Newark, NJ 07105"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "277",
+		"name": "Mr. Gold",
+		"is_enabled": "true",
+		"last_seen": "1539288605117",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.734499999999997",
+				"longitude": "-74.1731419999999986",
+				"country": "USA",
+				"city": "Newark",
+				"street": "831 Broad St, Newark, NJ 07102"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "369",
+		"name": "Linka Convenience Store",
+		"is_enabled": "true",
+		"last_seen": "1539288648911",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7972719999999995",
+				"longitude": "-74.0022170000000017",
+				"country": "USA",
+				"city": "North Bergen",
+				"street": "7610 Broadway, North Bergen, NJ 07047"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "384",
+		"name": "Phone Cards Store",
+		"is_enabled": "true",
+		"last_seen": "1539288648507",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.4333699999999965",
+				"longitude": "-74.5175389999999993",
+				"country": "USA",
+				"city": "North Bergen",
+				"street": "1517 Finnegans Lane, North Brunswick, NJ 08902"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "362",
+		"name": "Jersey Pride Food Store",
+		"is_enabled": "true",
+		"last_seen": "1539288657591",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.4097099999999969",
+				"longitude": "-74.3567319999999938",
+				"country": "USA",
+				"city": "Old Bridge",
+				"street": "15 County road 516, Old  Bridge,  NJ 08857"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "393",
+		"name": "Parlin Pharmacy",
+		"is_enabled": "true",
+		"last_seen": "1539288646072",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.4544089999999983",
+				"longitude": "-74.2946790000000021",
+				"country": "USA",
+				"city": "Parlin",
+				"street": "499 Ernston Rd, Parlin, NJ 08859"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "308",
+		"name": "AMA Mobile",
+		"is_enabled": "true",
+		"last_seen": "1539288550345",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.916370999999998",
+				"longitude": "-74.173491999999996",
+				"country": "USA",
+				"city": "Paterson",
+				"street": "242 Main Street, Paterson, NJ 07505"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "300",
+		"name": "Pennington LUKOIL",
+		"is_enabled": "true",
+		"last_seen": "1539288645514",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.3077919999999992",
+				"longitude": "-74.7853209999999962",
+				"country": "USA",
+				"city": "Pennington",
+				"street": "2558 Pennington Road,Pennington,NJ 08534"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "376",
+		"name": "Main Street Deli",
+		"is_enabled": "true",
+		"last_seen": "1539288593465",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.8050009999999972",
+				"longitude": "-75.0016370000000023",
+				"country": "USA",
+				"city": "Pine Hill",
+				"street": "300 Blackwood Clementon Rd,  Pine Hill,  NJ 08021"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "279",
+		"name": "George's market",
+		"is_enabled": "true",
+		"last_seen": "1539288547410",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.9925190000000015",
+				"longitude": "-74.2806879999999978",
+				"country": "USA",
+				"city": "Pompton Lakes",
+				"street": "766 Humburg Turnpike,  Pompton Lakes,  NJ 07442"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "292",
+		"name": "Sunny Mart Food Store & Deli",
+		"is_enabled": "true",
+		"last_seen": "1539288513175",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.5643969999999996",
+				"longitude": "-74.2570659999999947",
+				"country": "USA",
+				"city": "Port Reading",
+				"street": "301 Port Reading Ave # 3, Port Reading, NJ 07064"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "411",
+		"name": "Princeton LUKOIL",
+		"is_enabled": "true",
+		"last_seen": "1539288601973",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.3111430000000013",
+				"longitude": "-74.6633640000000014",
+				"country": "USA",
+				"city": "Princeton",
+				"street": "3513 Route 1 south,Princeton, NJ 08540"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "389",
+		"name": "Mike's Dairy & Deli",
+		"is_enabled": "true",
+		"last_seen": "1539288647206",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.372835000000002",
+				"longitude": "-74.0882529999999946",
+				"country": "USA",
+				"city": "Red Bank",
+				"street": "75 Oak Hill Rd, Red Bank, NJ 07701"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "268",
+		"name": "Exxon Gas Station Roselle",
+		"is_enabled": "true",
+		"last_seen": "1539288653590",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.6427339999999973",
+				"longitude": "-74.259957",
+				"country": "USA",
+				"city": "Roselle",
+				"street": "501 Saint Georges Ave, Roselle, NJ 07203"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "336",
+		"name": "Country farm",
+		"is_enabled": "true",
+		"last_seen": "1539288523084",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.1356830000000002",
+				"longitude": "-74.0623329999999953",
+				"country": "USA",
+				"city": "Sea Girt",
+				"street": "1320 Sea Girt Ave, Sea Girt, NJ 08750"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "344",
+		"name": "Rick's Farm",
+		"is_enabled": "true",
+		"last_seen": "1539288549157",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.8493169999999992",
+				"longitude": "-75.0313430000000068",
+				"country": "USA",
+				"city": "Somerdale",
+				"street": "428 N Warwick Rd, Somerdale, NJ 08083"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "357",
+		"name": "Exxon  Gas Station.",
+		"is_enabled": "true",
+		"last_seen": "1539288653534",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.516964999999999",
+				"longitude": "-74.4896140000000031",
+				"country": "USA",
+				"city": "Somerset",
+				"street": "1101 Easton Ave, Somerset, NJ 08873"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "311",
+		"name": "Sayreville Exxon",
+		"is_enabled": "true",
+		"last_seen": "1539288621610",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.4854089999999971",
+				"longitude": "-74.2968410000000006",
+				"country": "USA",
+				"city": "South Amboy",
+				"street": "6040 NJ-35, South Amboy, NJ 08879"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "348",
+		"name": "Shelton Gulf",
+		"is_enabled": "true",
+		"last_seen": "1539288646017",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.5595599999999976",
+				"longitude": "-74.4389340000000033",
+				"country": "USA",
+				"city": "South Plainfield",
+				"street": "4480 Stelton Rd, South Plainfield, NJ 07080"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "286",
+		"name": "Mountain Variety",
+		"is_enabled": "true",
+		"last_seen": "1539288569813",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.6906409999999994",
+				"longitude": "-74.3311839999999933",
+				"country": "USA",
+				"city": "Springfield",
+				"street": "717 Mountain avenue, Springfield Township, NJ 07081"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "274",
+		"name": "Luk Oil Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288573449",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.6688559999999981",
+				"longitude": "-74.4823030000000017",
+				"country": "USA",
+				"city": "Stirling",
+				"street": "1039 Valley Road, Stirling, NJ 07980"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "353",
+		"name": "Exxon  Gas Station",
+		"is_enabled": "true",
+		"last_seen": "1539288514814",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.029713000000001",
+				"longitude": "-74.224339999999998",
+				"country": "USA",
+				"city": "Toms River",
+				"street": "2096 Lakewood Rd, Toms River, NJ 08755"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "390",
+		"name": "Lukoil Mini-Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288623604",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.0103300000000033",
+				"longitude": "-74.1477419999999938",
+				"country": "USA",
+				"city": "Toms River",
+				"street": "1820 Hooper Ave, Toms River, NJ 08753"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "303",
+		"name": "Super Deli 7 Food",
+		"is_enabled": "true",
+		"last_seen": "1539288502074",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.2579380000000029",
+				"longitude": "-74.7619150000000019",
+				"country": "USA",
+				"city": "Trenton",
+				"street": "2325 Spruce St, Trenton, NJ 08638"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "333",
+		"name": "Care Plus Pharmacy",
+		"is_enabled": "true",
+		"last_seen": "1539288525458",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.696983000000003",
+				"longitude": "-74.2690649999999977",
+				"country": "USA",
+				"city": "Union",
+				"street": "1024 Stuyvesant Avenue, Union, NJ 07083"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "392",
+		"name": "Krauszer’s Food Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288554709",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.8338669999999979",
+				"longitude": "-74.2484050000000053",
+				"country": "USA",
+				"city": "Verona",
+				"street": "24 grove Ave, Verona, NJ 07044"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "309",
+		"name": "Xpress Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288519521",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.502122",
+				"longitude": "-75.0241149999999948",
+				"country": "USA",
+				"city": "Vineland",
+				"street": "67 East Oak Road, Vineland, NJ 08360"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "406",
+		"name": "7-11 Voorhees",
+		"is_enabled": "true",
+		"last_seen": "1539288591132",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.823402999999999",
+				"longitude": "-74.9277230000000003",
+				"country": "USA",
+				"city": "Voorhees Township",
+				"street": "82 NJ-73, Voorhees Township, NJ 08043"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "388",
+		"name": " T-Bowl smoke Shop",
+		"is_enabled": "true",
+		"last_seen": "1539288646306",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.9592340000000021",
+				"longitude": "-74.2374599999999987",
+				"country": "USA",
+				"city": "Wayne",
+				"street": "1055 Hamburg Turnpike, Wayne, NJ 07470"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "272",
+		"name": "A&G Multiservice LLC",
+		"is_enabled": "true",
+		"last_seen": "1539288620242",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7858360000000033",
+				"longitude": "-74.0190609999999936",
+				"country": "USA",
+				"city": "West New York",
+				"street": "500 55th Street, West New York, NJ 07093"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "431",
+		"name": "Hot Tech Wireless",
+		"is_enabled": "true",
+		"last_seen": "1539288610535",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.7876389999999986",
+				"longitude": "-74.2313680000000033",
+				"country": "USA",
+				"city": "West Orange",
+				"street": "296 Main St, West Orange, NJ 07052"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "269",
+		"name": "Deli stop food market",
+		"is_enabled": "true",
+		"last_seen": "1539288638913",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.863463000000003",
+				"longitude": "-75.1321219999999954",
+				"country": "USA",
+				"city": "Westville",
+				"street": "907 Broadway, Westville, NJ 08093"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "373",
+		"name": "The News Shop",
+		"is_enabled": "true",
+		"last_seen": "1539288656610",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.9463039999999978",
+				"longitude": "-74.3521989999999988",
+				"country": "USA",
+				"city": "Whiting",
+				"street": "550 Country Road 530, Whiting, NJ 08759"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "352",
+		"name": "Country Farms",
+		"is_enabled": "true",
+		"last_seen": "1539288499276",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.0422999999999973",
+				"longitude": "-74.9048999999999978",
+				"country": "USA",
+				"city": "Willingboro",
+				"street": "224 Pennypacker Dr, Willingboro, NJ 08046"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "347",
+		"name": "Willingboro Food Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288567594",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.0382409999999993",
+				"longitude": "-74.8916109999999975",
+				"country": "USA",
+				"city": "Willingboro",
+				"street": "300 Charlestone Rd., Willingboro, NJ 08046"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "381",
+		"name": "Krauszer's Liquor & Food Store",
+		"is_enabled": "true",
+		"last_seen": "1539288647693",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.5376440000000002",
+				"longitude": "-74.287313999999995",
+				"country": "USA",
+				"city": "Woodbridge",
+				"street": "683 Florida Grove Rd, Woodbridge, NJ 07095"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "359",
+		"name": "Exxon  Gas Station",
+		"is_enabled": "true",
+		"last_seen": "1539288607223",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.1305890000000005",
+				"longitude": "-74.9226660000000066",
+				"country": "USA",
+				"city": "Bensalem",
+				"street": "5716 Hulmeville Road, Bensalem, PA 19020"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "405",
+		"name": "Friendly Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288559448",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.1202770000000015",
+				"longitude": "-74.9059079999999966",
+				"country": "USA",
+				"city": "Bensalem",
+				"street": "5601 Bensalem Boulevard, Bensalem, PA 19020"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "425",
+		"name": "Quick Stop Food Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288634673",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.186238000000003",
+				"longitude": "-75.4524550000000005",
+				"country": "USA",
+				"city": "Collegeville",
+				"street": "310 E Main St, Collegeville, PA 19426"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "360",
+		"name": "Exxon  Gas Station",
+		"is_enabled": "true",
+		"last_seen": "1539288609611",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.1770530000000008",
+				"longitude": "-74.9172910000000059",
+				"country": "USA",
+				"city": "Langhorne",
+				"street": "123 N Pine St, Langhorne, PA 19047"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "335",
+		"name": "Gulf Gas Station",
+		"is_enabled": "true",
+		"last_seen": "1539288607867",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.2586799999999982",
+				"longitude": "-75.2647709999999961",
+				"country": "USA",
+				"city": "Lansdale",
+				"street": "1901 N Broad St, Lansdale,  PA 19446"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "385",
+		"name": "Chestnut Smoke Shop",
+		"is_enabled": "true",
+		"last_seen": "1539288652176",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.9498099999999994",
+				"longitude": "-75.1536899999999974",
+				"country": "USA",
+				"city": "Philadelphia",
+				"street": "87 S 8th St, Philadelphia, PA 19106"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "346",
+		"name": "Gulf Gas Station",
+		"is_enabled": "true",
+		"last_seen": "1539288567164",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.0304519999999968",
+				"longitude": "-75.1187579999999997",
+				"country": "USA",
+				"city": "Philadelphia",
+				"street": "5302 Rising Sun Ave,  Philadelphia,  PA 19120"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "305",
+		"name": "GULF Gas Station ",
+		"is_enabled": "true",
+		"last_seen": "1538657377956",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.991183999999997",
+				"longitude": "-75.2261079999999964",
+				"country": "USA",
+				"city": "Philadelphia",
+				"street": "5026 Wynnefield Ave, Philadelphia, PA 19131"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "375",
+		"name": "Luk Oil Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288523857",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.960523000000002",
+				"longitude": "-75.1377030000000019",
+				"country": "USA",
+				"city": "Philadelphia",
+				"street": "600 N Delaware Ave, Philadelphia, PA 19123"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "345",
+		"name": "LUKOIL Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288528873",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "40.0034759999999991",
+				"longitude": "-75.2210589999999968",
+				"country": "USA",
+				"city": "Philadelphia",
+				"street": "4400 City Ave, Philadelphia, PA 19131"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "358",
+		"name": "Telestar wireless",
+		"is_enabled": "true",
+		"last_seen": "1539288658506",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.9386160000000032",
+				"longitude": "-75.1711600000000004",
+				"country": "USA",
+				"city": "Philadelphia",
+				"street": "1635 Washington Ave, Philadelphia, PA 19146"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTMBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+	,
+	{
+		"id": "368",
+		"name": "Pantry 1 Food Mart",
+		"is_enabled": "true",
+		"last_seen": "1539288522379",
+		"operator_name": "Paydepot.com",
+		"location":
+			{
+				"latitude": "39.8708120000000008",
+				"longitude": "-75.3331929999999943",
+				"country": "USA",
+				"city": "Ridley Park",
+				"street": "609 Chester Pike,  Ridley Park, PA 19078"
+			},
+		"currency_code": "USD",
+		"currency_symbol": "$",
+		"tiered_prices":
+			{
+				"bitcoin":
+			{
+						"market_feed": "BitcoinAverage",
+						"aggregate":
+			{
+								"buy":
+			{
+												"min_price": "7218.56",
+												"max_price": "7734.17",
+												"weighted_price": "7411.91"
+									}
+							}
+					}
+			},
+		"atm_provider": "COVAULTBTMBTM",
+		"identification":
+			{
+				"is_phone": "true",
+				"is_palm_vein": "false",
+				"is_photo": "true",
+				"is_id_doc_scan": "true",
+				"is_finger_print": "false"
+			}
+	}
+]

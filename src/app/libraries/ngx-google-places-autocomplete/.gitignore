@@ -1,0 +1,10 @@
+node_modules/
+typings/
+src/**/*.js
+src/**/*.map
+example/**/*.js
+example/**/*.map
+.idea/
+dist/
+build.zip
+publish_release_github.js

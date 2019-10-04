@@ -1,0 +1,224 @@
+
+.legend {
+
+  overflow: hidden;
+
+  padding: 55px 0;
+
+  background-color: #fff;
+}
+
+@media (max-width: 1440px) {
+
+  .legend {
+
+    padding: 35px 0;
+  }
+}
+
+@media (max-width: 479px) {
+
+  .legend {
+
+    padding-top: 20px;
+  }
+}
+
+.legend__items {
+
+  display: -webkit-box;
+
+  display: -webkit-flex;
+
+  display: -ms-flexbox;
+
+  display: flex;
+}
+
+@media (max-width: 767px) {
+
+  .legend__items {
+
+    -webkit-box-pack: justify;
+
+    -webkit-justify-content: space-between;
+
+    -ms-flex-pack: justify;
+
+    justify-content: space-between;
+  }
+}
+
+.legend__item {
+
+  display: -webkit-box;
+
+  display: -webkit-flex;
+
+  display: -ms-flexbox;
+
+  display: flex;
+
+  -webkit-box-align: center;
+
+  -webkit-align-items: center;
+
+  -ms-flex-align: center;
+
+  align-items: center;
+
+  width: 33.333%;
+
+  -webkit-box-sizing: border-box;
+
+  box-sizing: border-box;
+
+  padding-left: 75px;
+
+  padding-right: 140px;
+
+  color: #012238;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  position: relative;
+}
+
+@media (max-width: 979px) {
+
+  .legend__item {
+
+    font-size: 14px;
+
+    padding-left: 65px;
+
+    padding-right: 3%;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .legend__item {
+
+    font-size: 10px;
+
+    padding-left: 20px;
+
+    padding-right: 5%;
+
+    width: auto;
+  }
+}
+
+@media (max-width: 479px) {
+
+  .legend__item {
+
+    font-weight: 400;
+
+    width: auto;
+  }
+}
+
+.legend__item.-forBuying::before {
+
+  background-image: url(scss/images/map-point-green.png);
+}
+
+.legend__item.-forBuyingSelling::before {
+
+  background-image: url(scss/images/map-point-red.png);
+}
+
+.legend__item.-closed::before {
+
+  background-image: url(scss/images/map-point-blue.png);
+}
+
+.legend__item::before {
+
+  content: '';
+
+  display: block;
+
+  position: absolute;
+
+  width: 157px;
+
+  height: 157px;
+
+  left: -40px;
+
+  top: 50%;
+
+  -webkit-transform: translateY(-50%);
+
+  -ms-transform: translateY(-50%);
+
+  transform: translateY(-50%);
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  -webkit-background-size: contain;
+
+  background-size: contain;
+}
+
+@media (max-width: 979px) {
+
+  .legend__item::before {
+
+    width: 137px;
+
+    height: 137px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .legend__item::before {
+
+    width: 77px;
+
+    height: 77px;
+
+    left: -35px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .legend__text.-desktop {
+
+    display: none;
+  }
+}
+
+.legend__text.-mobile {
+
+  display: none;
+}
+
+@media (max-width: 767px) {
+
+  .legend__text.-mobile {
+
+    display: block;
+  }
+}
+@media (max-width: 1169px) {
+
+  .legend__item {
+
+    padding-right: 7%;
+  }
+}
+

@@ -1,0 +1,165 @@
+.slideCheckbox {
+
+  min-height: 28px;
+}
+.slideCheckbox__checkbox{
+  display: none;
+}
+
+.slideCheckbox__label::after {
+
+  content: '';
+
+  display: block;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 4px;
+
+  -webkit-transform: translateY(-50%);
+
+  -ms-transform: translateY(-50%);
+
+  transform: translateY(-50%);
+
+  width: 20px;
+
+  height: 20px;
+
+  -webkit-border-radius: 50%;
+
+  border-radius: 50%;
+
+  background-color: #fff;
+
+  -webkit-transition-duration: 0.3s;
+
+  -o-transition-duration: 0.3s;
+
+  transition-duration: 0.3s;
+
+  -webkit-box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.05);
+
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 979px) {
+
+  .slideCheckbox__label::after {
+
+    width: 18px;
+
+    height: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .slideCheckbox__label::after {
+
+    -webkit-transition: none;
+
+    -o-transition: none;
+
+    transition: none;
+
+    -webkit-transition-duration: 0s;
+
+    -o-transition-duration: 0s;
+
+    transition-duration: 0s;
+  }
+}
+
+
+@media (max-width: 979px) {
+
+  .slideCheckbox {
+
+    min-height: 25px;
+  }
+}
+
+.slideCheckbox__checkbox:checked + .slideCheckbox__label::before {
+
+  background-color: #23c861;
+}
+
+.slideCheckbox__checkbox:checked + .slideCheckbox__label::after {
+
+  left: 22px;
+}
+
+.slideCheckbox__label {
+
+  position: relative;
+
+  padding-left: 60px;
+
+  cursor: pointer;
+}
+
+.slideCheckbox__label::before {
+
+  content: '';
+
+  display: block;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 0;
+
+  -webkit-transform: translateY(-50%);
+
+  -ms-transform: translateY(-50%);
+
+  transform: translateY(-50%);
+
+  -webkit-border-radius: 14px;
+
+  border-radius: 14px;
+
+  width: 47px;
+
+  height: 28px;
+
+  background-color: #e3e3e3;
+
+  -webkit-transition-duration: 0.3s;
+
+  -o-transition-duration: 0.3s;
+
+  transition-duration: 0.3s;
+}
+
+@media (max-width: 979px) {
+
+  .slideCheckbox__label::before {
+
+    width: 45px;
+
+    height: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .slideCheckbox__label::before {
+
+    -webkit-transition: none;
+
+    -o-transition: none;
+
+    transition: none;
+
+    -webkit-transition-duration: 0s;
+
+    -o-transition-duration: 0s;
+
+    transition-duration: 0s;
+  }
+}

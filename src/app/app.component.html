@@ -1,0 +1,40 @@
+<div class="map-block">
+  <google-map class="google-map map-block-item"></google-map>
+  <terminal-filter-form class="terminal-filter-form map-block-item"
+                        [radius]=""
+                        [radiusUnit]=""
+
+  ></terminal-filter-form>
+</div>
+<div class="legend block">
+  <div class="block-content legend__content">
+    <div class="legend__items">
+      <div class="legend__item -forBuying">
+        <span class="legend__text -desktop">Open stores for buying only</span>
+        <span class="legend__text -mobile">Buying only</span>
+      </div>
+      <div class="legend__item -forBuyingSelling">
+        <span class="legend__text -desktop">Open stores for buying and selling</span>
+        <span class="legend__text -mobile">Buying and selling</span>
+      </div>
+      <div class="legend__item -closed">
+        <span class="legend__text -desktop">Closed stores</span>
+        <span class="legend__text -mobile">Closed</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mapPageBlock block">
+  <div class="block-content mapPageBlock__content">
+    <h1 class="mapPageBlock__title">All Bitcoin Terminals</h1>
+    <div class="mapPageBlock__descr">With over count_terminal()
+      locations across the USA, you'll be sure to find one nearby. View your nearest Bitcoin ATM on our map.
+    </div>
+  </div>
+</div>
+<div class="terminalList">
+  <div id="terminal-list" class="terminalList__content"></div>
+</div>
+
+
+
