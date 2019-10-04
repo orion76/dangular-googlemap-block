@@ -7,7 +7,6 @@ export const APP_CONFIG = new InjectionToken<IAppConfig>('APP_CONFIG');
 export interface IAppConfig {
   zoom: number;
   filters: IFilters;
-  nearMy: boolean;
   distanceUnits: IDistanceUnits;
   stylesConfig: MapTypeStyle[];
 }
@@ -24,7 +23,6 @@ export const appConfig: IAppConfig = {
     km: {type: 'km', name: 'Kilometer', dim: 1},
     mile: {type: 'mile', name: 'Mile', dim: 1.609344}
   },
-  nearMy: false,
   stylesConfig: [
     {elementType: 'geometry', stylers: [{color: '#f5f5f5'}]},
     {elementType: 'labels.icon', stylers: [{visibility: 'off'}]},

@@ -4,7 +4,9 @@ import {TERMINAL_FILTER_SERVICE} from '../../services/terminal-filter.service';
 import {FormsModule} from '@angular/forms';
 import {GooglePlaceModule} from '../../libraries/ngx-google-places-autocomplete/src/ngx-google-places-autocomplete.module';
 import {Options} from '../../libraries/ngx-google-places-autocomplete/src/objects/options/options';
-import {DropdownModule} from 'primeng/primeng';
+import {DropdownModule} from 'primeng/dropdown';
+import {ButtonModule} from 'primeng/button';
+
 import {
   IDistanceUnit,
   IRadiusValue,
@@ -62,10 +64,11 @@ import {Observable} from 'rxjs';
 
                   <div class="slideCheckbox">
                       <div class="mapFilter__row">
-                          <input id="nears" (change)="onNearMeChanged()" type="checkbox" name="nears"
-                                 [(ngModel)]="nearMe"
-                                 class="slideCheckbox__checkbox">
-                          <label for="nears" class="slideCheckbox__label -nodrag">Near me</label>
+                          <p-button (onClick)="onNearMeChanged()" label="Near me" type="button"></p-button>
+                          <!--                          <input id="nears"(change)="onNearMeChanged()" type="checkbox" name="nears"-->
+                          <!--                                 [(ngModel)]="nearMe"-->
+                          <!--                                 class="slideCheckbox__checkbox">-->
+                          <!--                          <label for="nears" class="slideCheckbox__label -nodrag">Near me</label>-->
                       </div>
                   </div>
 
@@ -126,7 +129,6 @@ export class TerminalFilterFormComponent implements OnInit {
   filterTerminal: ITerminalFilters;
   searchField = '';
   radiusUnitOptions: ISelectOption[] = [];
-  nearMe: boolean;
 
   constructor(@Inject(TERMINAL_FILTER_SERVICE) public service: ITerminalFilterService,
               @Inject(APP_CONFIG) private config: IAppConfig) {
@@ -147,13 +149,11 @@ export class TerminalFilterFormComponent implements OnInit {
   }
 
   onNearMeChanged() {
-    if (this.nearMe) {
-      navigator.geolocation.getCurrentPosition((position: Position) => {
-        const source = 'near-me';
-        const {longitude, latitude} = position.coords;
-        this.service.changeCoordinates({source, latitude, longitude});
-      });
-    }
+    navigator.geolocation.getCurrentPosition((position: Position) => {
+      const source = 'near-me';
+      const {longitude, latitude} = position.coords;
+      this.service.changeCoordinates({source, latitude, longitude});
+    });
   }
 
   onAddressChanged(event) {
@@ -176,7 +176,7 @@ export class TerminalFilterFormComponent implements OnInit {
     return {
       label: config.name,
       unit: type,
-      value: Math.round(len / config.dim)
+      value: Math.round(len * config.dim)
     };
   }
 
@@ -186,7 +186,6 @@ export class TerminalFilterFormComponent implements OnInit {
     this.onRadiusChanged();
     this.radiusUnitOptions = this.createRadiusOptions();
     this.filterTerminal = this.config.filters.terminalFilters;
-    this.nearMe = this.config.nearMy;
 
   }
 }
@@ -198,6 +197,7 @@ export class TerminalFilterFormComponent implements OnInit {
     FormsModule,
     GooglePlaceModule,
     DropdownModule,
+    ButtonModule,
   ],
   exports: [TerminalFilterFormComponent],
   declarations: [TerminalFilterFormComponent],

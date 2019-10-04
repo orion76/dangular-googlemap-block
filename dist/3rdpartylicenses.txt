@@ -101,9 +101,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-@angular/cdk/scrolling
-
 @angular/common
+MIT
+
+@angular/compiler
 MIT
 
 @angular/core
@@ -113,6 +114,9 @@ MIT
 MIT
 
 @angular/platform-browser
+MIT
+
+@angular/platform-browser-dynamic
 MIT
 
 core-js
