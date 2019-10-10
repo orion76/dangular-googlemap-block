@@ -26,9 +26,8 @@ import {ICoordinates, TRadiusUnits} from './components/types';
               </div>
           </div>
       </div>
-
-
   `,
+  styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
   title = 'app';

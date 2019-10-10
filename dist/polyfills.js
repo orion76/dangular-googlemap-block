@@ -6560,8 +6560,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/pasha/www/work/coin/web/libraries/coin-googlemap/src/polyfills.ts */"./src/polyfills.ts");
-module.exports = __webpack_require__(/*! /home/pasha/www/work/coin/web/libraries/coin-googlemap/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
+__webpack_require__(/*! /home/pasha/www/angular/dangular-googlemap-block/src/polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! /home/pasha/www/angular/dangular-googlemap-block/node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js */"./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/jit-polyfills.js");
 
 
 /***/ })
