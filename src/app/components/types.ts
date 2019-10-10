@@ -1,5 +1,4 @@
 import {BehaviorSubject, Observable} from 'rxjs';
-import {LatLngBoundsLiteral} from '@agm/core';
 
 export type TRadiusUnits = 'km' | 'mile';
 
@@ -28,7 +27,7 @@ export interface ITerminalFilterService {
   coordinates: Observable<ICoordinates>;
   filterTerminal: BehaviorSubject<ITerminalFilters>;
   terminals$: Observable<any>;
-  fitBounds: BehaviorSubject<LatLngBoundsLiteral | boolean>;
+  // fitBounds: BehaviorSubject<LatLngBoundsLiteral | boolean>;
   filters$: Observable<IFilters>;
 
   changeCoordinates(coordinates: ICoordinates);

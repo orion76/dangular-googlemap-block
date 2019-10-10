@@ -27,6 +27,7 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "src/styles.scss",
               "node_modules/primeng/resources/primeng.css"
             ],
             "scripts": []
@@ -45,7 +46,9 @@
               "extractCss": true,
               "namedChunks": false,
               "aot": true,
-              "styles": [],
+              "styles": [
+                "node_modules/primeng/resources/primeng.css"
+              ],
               "assets": [
 
               ],

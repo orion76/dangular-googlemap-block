@@ -13,6 +13,7 @@ import {delay, distinctUntilChanged, map, take, tap, withLatestFrom} from 'rxjs/
 import {DATA_SERVICE, IDataService, IParams} from './data.service';
 import {LatLngBoundsLiteral} from '@agm/core';
 import {IViewUpdateService, VIEW_UPDATE_SERVICE} from './view-update.service';
+import {FIT_BOUNDS_SERVICE, IFitBoundsService} from './fitbounds.service';
 
 export const TERMINAL_FILTER_SERVICE = new InjectionToken('TERMINAL_FILTER_SERVICE');
 
@@ -26,7 +27,7 @@ export class TerminalFilterService implements ITerminalFilterService {
   zoom: BehaviorSubject<number>;
   radius: BehaviorSubject<IRadiusValue>;
   filterTerminal: BehaviorSubject<ITerminalFilters>;
-  fitBounds: BehaviorSubject<LatLngBoundsLiteral | boolean>;
+  // fitBounds: BehaviorSubject<LatLngBoundsLiteral | boolean>;
   terminals$: BehaviorSubject<ITerminalInfo[]>;
   coordinatesPrev: ICoordinates;
   filters$: Observable<IFilters>;
@@ -35,9 +36,13 @@ export class TerminalFilterService implements ITerminalFilterService {
   _radiusSubscription: Subscription;
   found: BehaviorSubject<number>;
 
-  constructor(@Inject(VIEW_UPDATE_SERVICE) private view: IViewUpdateService,
-              @Inject(APP_CONFIG) private config: IAppConfig,
-              @Inject(DATA_SERVICE) private data: IDataService) {
+  coordinateDecimalPlaces = 10 ** 6;
+
+  constructor(
+    @Inject(VIEW_UPDATE_SERVICE) private view: IViewUpdateService,
+    @Inject(FIT_BOUNDS_SERVICE) private fitBounds: IFitBoundsService,
+    @Inject(APP_CONFIG) private config: IAppConfig,
+    @Inject(DATA_SERVICE) private data: IDataService) {
   }
 
   private _coordinates: BehaviorSubject<ICoordinates>;
@@ -56,6 +61,7 @@ export class TerminalFilterService implements ITerminalFilterService {
 
   _prepareCoordinates(coordinates: ICoordinates): ICoordinates {
     const {source, latitude, longitude} = coordinates;
+
     return {
       source,
       latitude: this._prepareCoordinate(latitude),
@@ -64,8 +70,7 @@ export class TerminalFilterService implements ITerminalFilterService {
   }
 
   _prepareCoordinate(coordinate: number) {
-    const res = Math.round(coordinate * 1000000) / 1000000
-    return res;
+    return Math.round(coordinate * this.coordinateDecimalPlaces) / this.coordinateDecimalPlaces;
   }
 
   changeCoordinates(coordinates: ICoordinates) {
@@ -74,7 +79,10 @@ export class TerminalFilterService implements ITerminalFilterService {
         .pipe(withLatestFrom((prev: ICoordinates) => prev), take(1))
         .subscribe((prev: ICoordinates) => {
           this.coordinatesPrev = prev;
-          this._coordinates.next(this._prepareCoordinates(coordinates));
+
+          this.fitBounds.source(coordinates.source);
+          coordinates = this._prepareCoordinates(coordinates);
+          this._coordinates.next(coordinates);
         });
     }
   }
@@ -135,7 +143,7 @@ export class TerminalFilterService implements ITerminalFilterService {
     this.terminals$ = new BehaviorSubject<ITerminalInfo[]>([]);
 
     const {coordinates, terminalFilters, radius} = this.config.filters;
-    this.fitBounds = new BehaviorSubject<boolean>(false);
+    // this.fitBounds = new BehaviorSubject<boolean>(false);
     this.zoom = new BehaviorSubject<number>(this.config.zoom);
     this.radius = new BehaviorSubject<IRadiusValue>(radius);
     this.found = new BehaviorSubject<number>(0);

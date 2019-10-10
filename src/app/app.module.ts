@@ -13,6 +13,7 @@ import {TERMINAL_FILTER_SERVICE, TerminalFilterService} from './services/termina
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {APP_CONFIG, appConfig} from './app.config';
 import {VIEW_UPDATE_SERVICE, ViewUpdateService} from './services/view-update.service';
+import {FIT_BOUNDS_SERVICE, FitBoundsService} from './services/fitbounds.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import {VIEW_UPDATE_SERVICE, ViewUpdateService} from './services/view-update.ser
   ],
   providers: [
     {provide: VIEW_UPDATE_SERVICE, useClass: ViewUpdateService},
+    {provide: FIT_BOUNDS_SERVICE, useClass: FitBoundsService},
     {provide: APP_CONFIG, useValue: appConfig},
     {provide: DATA_SERVICE, useClass: DataService},
     {provide: TERMINAL_FILTER_SERVICE, useClass: TerminalFilterService},

@@ -16,7 +16,7 @@ import {AgmCoreModule, AgmInfoWindow, AgmMap, AgmMarker, LatLng, MapTypeStyle} f
 import {DATA_SERVICE, IDataService} from '../../services/data.service';
 import {TERMINAL_FILTER_SERVICE} from '../../services/terminal-filter.service';
 import {
-  ICoordinates,
+  ICoordinates, IDistanceUnit,
   IFilters,
   IMessageItem,
   IMessageWindowState,
@@ -34,6 +34,7 @@ import {delay, filter, withLatestFrom} from 'rxjs/operators';
 import {MessageWindowModule} from '../message-window/message-window.component';
 import {TerminalMessages} from '../message-window/messages.config';
 import {IViewUpdateService, VIEW_UPDATE_SERVICE} from '../../services/view-update.service';
+import {FIT_BOUNDS_SERVICE, IFitBoundsService} from '../../services/fitbounds.service';
 
 
 /*
@@ -45,11 +46,12 @@ import {IViewUpdateService, VIEW_UPDATE_SERVICE} from '../../services/view-updat
       <agm-map [latitude]="coordinates.latitude"
                [longitude]="coordinates.longitude"
                [zoom]="service.zoom | async "
+               maxZoom="18"
                [scrollwheel]="null"
                [styles]="styles"
                gestureHandling="cooperative"
                streetViewControl="false"
-               [fitBounds]="service.fitBounds | async "
+               [fitBounds]="(fitBounds.value$ | async) "
                (mapReady)="onMapReady($event)"
       >
           <agm-marker-cluster
@@ -71,6 +73,20 @@ import {IViewUpdateService, VIEW_UPDATE_SERVICE} from '../../services/view-updat
                   </agm-info-window>
               </agm-marker>
           </agm-marker-cluster>
+          <agm-circle
+
+                  [longitude]="(service.coordinates | async).longitude"
+                  [latitude]="(service.coordinates | async).latitude"
+                  [radius]="(service.radius | async).value *1000"
+                  fillOpacity=".1"
+                  [fillColor]="circleColor"
+                  [strokeColor]="circleColor"
+                  strokeOpacity="0.3"
+                  strokeWeight="2"
+
+          >
+
+          </agm-circle>
       </agm-map>
       <message-window [message]="message$" (state)="onMessageWindowClose($event)"></message-window>
   `,
@@ -78,10 +94,12 @@ import {IViewUpdateService, VIEW_UPDATE_SERVICE} from '../../services/view-updat
 })
 
 export class GoogleMapComponent implements OnInit, OnDestroy {
+  circleVisible = true;
+  circleColor = '#090';
 
   styles: MapTypeStyle[];
   message$: Subject<IMessageItem> = new Subject<IMessageItem>();
-  @Input() coordinates: ICoordinates = {source: 'init', latitude: 40, longitude: -76};
+  coordinates: ICoordinates = {source: 'init', latitude: 40, longitude: -76};
 
   public terminals$: Observable<ITerminalInfo[]>;
 
@@ -92,11 +110,13 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
   @ViewChild(AgmMap, {static: true}) private mapComponent: AgmMap;
   private _map: GoogleMap;
 
-  constructor(@Inject(VIEW_UPDATE_SERVICE) private view: IViewUpdateService,
-              @Inject(APP_CONFIG) private config: IAppConfig,
-              @Inject(DATA_SERVICE) private data: IDataService,
-              @Inject(TERMINAL_FILTER_SERVICE) public service: ITerminalFilterService,
-              private cdr: ChangeDetectorRef) {
+  constructor(
+    @Inject(FIT_BOUNDS_SERVICE) public fitBounds: IFitBoundsService,
+    @Inject(VIEW_UPDATE_SERVICE) private view: IViewUpdateService,
+    @Inject(APP_CONFIG) private config: IAppConfig,
+    @Inject(DATA_SERVICE) private data: IDataService,
+    @Inject(TERMINAL_FILTER_SERVICE) public service: ITerminalFilterService,
+    private cdr: ChangeDetectorRef) {
   }
 
   onMessageWindowClose(state: IMessageWindowState) {
@@ -143,35 +163,42 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
         this.coordinates = coordinates;
       });
 
-    this.terminals$ = this.service.terminals$;
+    this.terminals$ = this.service.terminals$.pipe(
+      filter((terminals: ITerminalInfo[]) => {
+        return terminals.length > 0;
+      })
+    );
 
-    this.service.terminals$.pipe(delay(1)).subscribe((terminals: ITerminalInfo[]) => {
-      if (terminals.length > 0) {
-        this.service.fitBounds.next(true);
-      } else {
-        this.service.fitBounds.next(false);
-      }
-    });
+    this.service.terminals$
+      .pipe(
+        delay(1),
+        withLatestFrom(this.fitBounds.value$)
+      )
+      .subscribe((terminals: ITerminalInfo[]) => {
+
+        this.fitBounds.set(terminals.length > 0);
+
+      });
 
     this.service.terminals$.pipe(
       filter((terminals: ITerminalInfo[]) => !terminals || terminals.length === 0),
       withLatestFrom(this.service.filters$, (_, filters: IFilters) => filters),
       filter((filters: IFilters) => filters.coordinates.source !== 'init')
     ).subscribe((filters: IFilters) => {
-
+      const config: IDistanceUnit = this.config.distanceUnits[filters.radius.unit];
       let message: IMessageItem;
 
       switch (filters.coordinates.source) {
         case 'address':
           message = TerminalMessages.terminalsByAddressNotFound(
             filters.coordinates.address,
-            filters.radius.value,
+            Math.round(filters.radius.value / config.dim),
             filters.radius.label
           );
           break;
         default:
           message = TerminalMessages.terminalsNotFound(
-            filters.radius.value,
+            Math.round(filters.radius.value / config.dim),
             filters.radius.label
           );
       }
