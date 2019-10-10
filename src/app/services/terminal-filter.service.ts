@@ -76,9 +76,13 @@ export class TerminalFilterService implements ITerminalFilterService {
   changeCoordinates(coordinates: ICoordinates) {
     if (coordinates) {
       this._coordinates
-        .pipe(withLatestFrom((prev: ICoordinates) => prev), take(1))
-        .subscribe((prev: ICoordinates) => {
-          this.coordinatesPrev = prev;
+        .pipe(withLatestFrom(this.found, (prev: ICoordinates, found: number) => ({prev, found})), take(1))
+        .subscribe((data: { prev: ICoordinates, found: number }) => {
+
+          if (data.found > 0) {
+            this.coordinatesPrev = data.prev;
+          }
+
 
           this.fitBounds.source(coordinates.source);
           coordinates = this._prepareCoordinates(coordinates);
@@ -90,7 +94,6 @@ export class TerminalFilterService implements ITerminalFilterService {
 
   subscribeSearchParametersChange(searchParameters) {
     return searchParameters.subscribe((filters: IFilters) => {
-      console.log('[searchParameters]', filters);
       const source = 'terminal';
 
       this.data.loadItems(source, filters)
@@ -113,8 +116,7 @@ export class TerminalFilterService implements ITerminalFilterService {
 
   onSearchParametersChange(): Observable<IFilters> {
     return combineLatest(this.coordinates, this.radius, this.filterTerminal).pipe(
-      map(([coordinates, radius, terminalFilters]) => ({coordinates, radius, terminalFilters})),
-      tap((filters) => console.log('[FILTERS CHANGE]', filters))
+      map(([coordinates, radius, terminalFilters]) => ({coordinates, radius, terminalFilters}))
     );
   }
 

@@ -32,16 +32,17 @@ export class FitBoundsService implements IFitBoundsService {
   get value$() {
     return this._value$.pipe(
       withLatestFrom(this._source$),
-      map(([value, source]) => {
-        switch (source) {
-          case 'mouse':
-            value = false;
-            break;
-        }
-
-        return value;
-      })
+      map(([value, source]) => this._isFitBounds(source, value))
     );
+  }
+
+  _isFitBounds(source: TCoordinatesSource, value: boolean) {
+    switch (source) {
+      case 'mouse':
+        value = false;
+        break;
+    }
+    return value;
   }
 
   set(value: boolean) {
