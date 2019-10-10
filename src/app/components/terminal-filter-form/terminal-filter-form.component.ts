@@ -139,8 +139,10 @@ export class TerminalFilterFormComponent implements OnInit {
   }
 
   searchClear() {
-    // this.service.backCoordinates();
-    this.searchField = '';
+    if (this.searchField.length > 0) {
+      this.service.backCoordinates();
+      this.searchField = '';
+    }
   }
 
   createRadiusOptions(): ISelectOption[] {

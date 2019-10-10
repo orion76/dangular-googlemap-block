@@ -37,6 +37,7 @@ export class FitBoundsService implements IFitBoundsService {
   }
 
   _isFitBounds(source: TCoordinatesSource, value: boolean) {
+
     switch (source) {
       case 'mouse':
         value = false;

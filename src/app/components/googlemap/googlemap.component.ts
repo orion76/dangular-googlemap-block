@@ -83,6 +83,7 @@ import {FIT_BOUNDS_SERVICE, IFitBoundsService} from '../../services/fitbounds.se
                   [strokeColor]="circleColor"
                   strokeOpacity="0.3"
                   strokeWeight="2"
+                  [clickable]="false"
 
           >
 
