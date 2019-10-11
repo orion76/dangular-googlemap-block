@@ -117,6 +117,7 @@ export interface IButton {
   action: TButtonAction;
   icon: string;
   label: string;
+  klass: string;
 }
 
 export interface IMessageItem {

@@ -4,11 +4,11 @@ import {ICoordinates, TRadiusUnits} from './components/types';
 @Component({
   selector: 'app-coin-googlemap',
   template: `
-      <div class="map-block container">
+      <div class="map-block container-fluid">
           <google-map class="google-map map-block-item"></google-map>
           <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>
       </div>
-      <div class="legend block">
+      <div class="legend block container">
           <div class="block-content legend__content">
               <div class="legend__items">
                   <div class="legend__item -forBuying">

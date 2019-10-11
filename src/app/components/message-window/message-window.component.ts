@@ -16,6 +16,7 @@ import {buttonsCollection} from './messages.config';
           <p>{{_message.message}}</p>
           <p-footer>
               <p-button *ngFor="let button of _message.buttons" type="button" [icon]="button.icon"
+                        [styleClass]="button.klass"
                         (onClick)="close(button.action)" [label]="button.label"></p-button>
           </p-footer>
       </p-dialog>
