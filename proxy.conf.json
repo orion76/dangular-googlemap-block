@@ -1,16 +1,16 @@
 {
   "/coin-api": {
-    "target": "http://coin1.ti-work.site",
+    "target": "http://crypto-dev1.ti-work.site",
     "secure": false,
     "changeOrigin": true
   },
   "/json": {
-    "target": "http://coin1.ti-work.site",
+    "target": "http://crypto-dev1.ti-work.site",
     "secure": false,
     "changeOrigin": true
   },
   "/sites": {
-    "target": "http://coin1.ti-work.site",
+    "target": "http://crypto-dev1.ti-work.site",
     "secure": false,
     "changeOrigin": true
   }
