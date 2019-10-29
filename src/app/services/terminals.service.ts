@@ -52,13 +52,13 @@ export class TerminalsService implements ITerminalsService {
           return data.map((terminal: any) => {
 
             if (terminal.action_buy && terminal.action_sell) {
-              terminal.icon = '/map-point-blue.png';
+              terminal.icon = 'map-point-blue.png';
             } else {
               if (terminal.action_buy) {
-                terminal.icon = '/map-point-green.png';
+                terminal.icon = 'map-point-green.png';
               }
               if (Number(terminal.status) === 0) {
-                terminal.icon = '/map-point-red.png';
+                terminal.icon = 'map-point-red.png';
               }
             }
 
