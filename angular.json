@@ -47,11 +47,10 @@
               "namedChunks": false,
               "aot": true,
               "styles": [
-                "node_modules/primeng/resources/primeng.css"
+                "node_modules/primeng/resources/primeng.css",
+                "src/styles.scss"
               ],
               "assets": [
-                "src/assets",
-                "src/favicon.ico"
               ],
               "extractLicenses": true,
               "vendorChunk": false,
