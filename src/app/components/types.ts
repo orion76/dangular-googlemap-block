@@ -1,5 +1,3 @@
-import {BehaviorSubject, Observable} from 'rxjs';
-
 export type TRadiusUnits = 'km' | 'mile';
 
 export interface ITerminalFilters {
@@ -21,30 +19,25 @@ export type IDistanceUnits = {
 
 
 export interface ITerminalFilterService {
-  radius: BehaviorSubject<IRadiusValue>;
-  found: BehaviorSubject<number>;
-  zoom: BehaviorSubject<number>;
-  coordinates: Observable<ICoordinates>;
-  filterTerminal: BehaviorSubject<ITerminalFilters>;
-  terminals$: Observable<any>;
-  // fitBounds: BehaviorSubject<LatLngBoundsLiteral | boolean>;
-  filters$: Observable<IFilters>;
+  search(filtersNew: Partial<IFilters>);
+  searchAddress(coordinates: ICoordinates);
+  searchCoordinates(coordinates: ICoordinates);
 
-  changeCoordinates(coordinates: ICoordinates);
+  searchRadius(radius: IRadiusValue);
+  searchRadiusUnit(unit: TRadiusUnits);
+  searchTerminalFilters(terminalFilters: ITerminalFilters);
 
-  backCoordinates();
-
-  init(): void;
-
-  destroy(): void;
+  back();
+  start();
 }
 
 export type TCoordinatesSource = 'init' | 'back' | 'address' | 'mouse' | 'radius' | 'near-me';
+export type TFilterSource = 'config' | 'form' | 'input';
 
 export interface ICoordinates {
   latitude: number;
   longitude: number;
-  source: TCoordinatesSource;
+  source?: TCoordinatesSource;
   address?: string;
 }
 
@@ -56,15 +49,23 @@ export interface ISelectOption {
 
 export interface IRadiusValue {
   label?: string;
-  unit: TRadiusUnits;
+  min?: number;
+  max?: number;
+  unit?: TRadiusUnits;
   value: number;
 }
 
+
 export interface IFilters {
-  coordinates: ICoordinates;
-  radius: IRadiusValue;
-  terminalFilters: ITerminalFilters;
+  coordinates?: ICoordinates;
+  radius?: IRadiusValue;
+  terminalFilters?: ITerminalFilters;
 }
+
+export interface IUserInput {
+  radiusUnit?: TRadiusUnits;
+}
+
 
 export interface IEntity {
   id: string;
@@ -80,6 +81,7 @@ export interface ITerminalInfo extends IEntity {
   action_buy: boolean;
   action_sell: boolean;
   limits: ITerminalLimit[];
+  currency: IEntity;
 
   showPrice(prices: ITerminalPrice[]);
 }
@@ -95,9 +97,13 @@ export interface ITerminalPriceItem extends IEntity {
   rate: number;
 }
 
+export interface ICoin extends IEntity {
+  code: string;
+}
+
 export interface ITerminalPrice extends IEntity {
   action: 'buy' | 'sell';
-  coin: IEntity;
+  coin: ICoin;
   prices: ITerminalPriceItem[];
 }
 

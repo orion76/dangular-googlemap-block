@@ -2,7 +2,34 @@
 @import "components/legend";
 @import "components/slide-checkbox";
 @import "components/dropdown";
+span.ui-slider-handle.ui-state-default.ui-corner-all.ui-clickable.ng-star-inserted{
+  background-color: #79f;
+  border: 1px solid #57a;
+}
 
+.ui-slider {
+  background-color: #c8c8c8;
+  border: 0 none;
+}
+
+.ui-slider .ui-slider-handle {
+  height: 1.143em;
+  width: 1.143em;
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -moz-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
 
 agm-map {
   height: 80vh;
@@ -223,19 +250,6 @@ form textarea {
   color: #202020;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form select,
-form textarea {
-  padding: 19px 25px;
-  min-height: 60px;
-  font-size: 16px;
-  border: 1px solid #e6e6e6;
-  border-radius: 17px;
-  font-weight: 300;
-}
-
 @media (max-width: 767px) {
   form input[type="text"],
   form input[type="email"],
@@ -318,4 +332,7 @@ terminal-info {
   h4 {
     margin: 0
   }
+}
+.ui-dialog {
+  background-color: #fff;
 }

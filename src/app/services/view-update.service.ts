@@ -27,7 +27,6 @@ export class ViewUpdateService implements IViewUpdateService {
   }
 
   addObservable(item: Observable<any>, name: string) {
-    const _name = name;
     this._subscriptions.push(item.pipe(delay(1)).subscribe((data: any) => {
       this._subject.next(true);
     }));

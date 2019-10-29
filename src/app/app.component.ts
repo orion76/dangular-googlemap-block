@@ -1,12 +1,25 @@
 import {Component, OnInit} from '@angular/core';
-import {ICoordinates, TRadiusUnits} from './components/types';
 
 @Component({
   selector: 'app-coin-googlemap',
   template: `
       <div class="map-block container-fluid">
           <google-map class="google-map map-block-item"></google-map>
-          <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>
+          <p-button (onClick)="showFilters()" label="Filters" type="button"
+                    [ngStyle]="filtersDisplay?{'display':'none'}:null">
+          </p-button>
+          <p-dialog header="Filters"
+                    [(visible)]="filtersDisplay"
+                    closable="true"
+                    draggable="true"
+                    positionTop="0"
+                    [positionLeft]="positionLeft"
+                    appendTo="body"
+                    [autoZIndex]="autoZIndex"
+          >
+              <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>
+          </p-dialog>
+
       </div>
       <div class="legend block container">
           <div class="block-content legend__content">
@@ -31,7 +44,14 @@ import {ICoordinates, TRadiusUnits} from './components/types';
 })
 export class AppComponent implements OnInit {
   title = 'app';
+  filtersDisplay = true;
+  positionLeft = window.innerWidth * .75;
+  autoZIndex = false;
 
   ngOnInit() {
+  }
+
+  showFilters() {
+    this.filtersDisplay = true;
   }
 }

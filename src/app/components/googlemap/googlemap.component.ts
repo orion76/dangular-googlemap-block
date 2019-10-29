@@ -3,7 +3,6 @@ import {
   ChangeDetectorRef,
   Component,
   Inject,
-  Input,
   NgModule,
   OnDestroy,
   OnInit,
@@ -15,26 +14,19 @@ import {CommonModule} from '@angular/common';
 import {AgmCoreModule, AgmInfoWindow, AgmMap, AgmMarker, LatLng, MapTypeStyle} from '@agm/core';
 import {DATA_SERVICE, IDataService} from '../../services/data.service';
 import {TERMINAL_FILTER_SERVICE} from '../../services/terminal-filter.service';
-import {
-  ICoordinates, IDistanceUnit,
-  IFilters,
-  IMessageItem,
-  IMessageWindowState,
-  ITerminalFilterService,
-  ITerminalInfo,
-  ITerminalPrice
-} from '../types';
+import {ICoordinates, ITerminalFilterService, ITerminalInfo, ITerminalPrice} from '../types';
 import {APP_CONFIG, IAppConfig} from '../../app.config';
-import {Observable, Subject} from 'rxjs';
+import {Observable} from 'rxjs';
 
 import {TerminalInfoModule} from '../terminal-info/terminal-info.component';
 import {GoogleMap} from '@agm/core/services/google-maps-types';
 import {AgmJsMarkerClustererModule} from '@agm/js-marker-clusterer';
-import {delay, filter, withLatestFrom} from 'rxjs/operators';
+import {filter} from 'rxjs/operators';
 import {MessageWindowModule} from '../message-window/message-window.component';
-import {TerminalMessages} from '../message-window/messages.config';
 import {IViewUpdateService, VIEW_UPDATE_SERVICE} from '../../services/view-update.service';
 import {FIT_BOUNDS_SERVICE, IFitBoundsService} from '../../services/fitbounds.service';
+import {ISearchResult, IStateMapService, STATE_MAP_SERVICE} from '../../services/state-map.service';
+import {ITerminalsService, TERMINALS_SERVICE} from '../../services/terminals.service';
 
 
 /*
@@ -42,16 +34,16 @@ import {FIT_BOUNDS_SERVICE, IFitBoundsService} from '../../services/fitbounds.se
 @Component({
   selector: 'google-map',
   template: `
-      <!--      {{debug(coordinates)}}-->
-      <agm-map [latitude]="coordinates.latitude"
-               [longitude]="coordinates.longitude"
-               [zoom]="service.zoom | async "
+      <!--           "-->
+      <agm-map [latitude]="(state.coordinates|async).latitude"
+               [longitude]="(state.coordinates|async).longitude"
+               [zoom]="(state.map | async).zoom"
                maxZoom="18"
                [scrollwheel]="null"
                [styles]="styles"
                gestureHandling="cooperative"
                streetViewControl="false"
-               [fitBounds]="(fitBounds.value$ | async) "
+               [fitBounds]="(fitBounds.value$ | async)"
                (mapReady)="onMapReady($event)"
       >
           <agm-marker-cluster
@@ -59,7 +51,7 @@ import {FIT_BOUNDS_SERVICE, IFitBoundsService} from '../../services/fitbounds.se
                   imageExtension="png"
                   maxZoom="20"
           >
-              <agm-marker *ngFor="let terminal of terminals$ | async"
+              <agm-marker *ngFor="let terminal of (searchResult$ | async).terminals"
                           [latitude]="terminal.latitude"
                           [longitude]="terminal.longitude"
                           [visible]="true"
@@ -75,9 +67,9 @@ import {FIT_BOUNDS_SERVICE, IFitBoundsService} from '../../services/fitbounds.se
           </agm-marker-cluster>
           <agm-circle
 
-                  [longitude]="(service.coordinates | async).longitude"
-                  [latitude]="(service.coordinates | async).latitude"
-                  [radius]="(service.radius | async).value *1000"
+                  [longitude]="(state.circle|async).longitude"
+                  [latitude]="(state.circle|async).latitude"
+                  [radius]="(state.radius | async)?.value *1000"
                   fillOpacity=".1"
                   [fillColor]="circleColor"
                   [strokeColor]="circleColor"
@@ -89,7 +81,7 @@ import {FIT_BOUNDS_SERVICE, IFitBoundsService} from '../../services/fitbounds.se
 
           </agm-circle>
       </agm-map>
-      <message-window [message]="message$" (state)="onMessageWindowClose($event)"></message-window>
+      <message-window></message-window>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -99,10 +91,9 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
   circleColor = '#090';
 
   styles: MapTypeStyle[];
-  message$: Subject<IMessageItem> = new Subject<IMessageItem>();
-  coordinates: ICoordinates = {source: 'init', latitude: 40, longitude: -76};
 
-  public terminals$: Observable<ITerminalInfo[]>;
+  coordinates: ICoordinates;
+  public searchResult$: Observable<ISearchResult>;
 
   @ViewChildren(AgmInfoWindow)
   private infoWindows: QueryList<AgmInfoWindow>;
@@ -117,20 +108,11 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
     @Inject(APP_CONFIG) private config: IAppConfig,
     @Inject(DATA_SERVICE) private data: IDataService,
     @Inject(TERMINAL_FILTER_SERVICE) public service: ITerminalFilterService,
+    @Inject(STATE_MAP_SERVICE) public state: IStateMapService,
+    @Inject(TERMINALS_SERVICE) private terminalsService: ITerminalsService,
     private cdr: ChangeDetectorRef) {
   }
 
-  onMessageWindowClose(state: IMessageWindowState) {
-    if (!state.submitted) {
-      return;
-    }
-    switch (state.action) {
-      case 'back':
-        this.service.backCoordinates();
-        break;
-
-    }
-  }
 
   onMarkerClick(terminal: ITerminalInfo) {
     this.closeAllInfoWindows();
@@ -147,69 +129,44 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
     this._map.addListener('dragend', () => {
       const coordinates: LatLng = this._map.getCenter();
 
-      this.service.changeCoordinates({source: 'mouse', latitude: coordinates.lat(), longitude: coordinates.lng()});
-      // this.service.coordinates.pipe(take<ICoordinates>(1))
-      //   .subscribe((_: ICoordinates) => this.service.fitBounds.next(false));
+      this.service.searchCoordinates({
 
+        latitude: coordinates.lat(),
+        longitude: coordinates.lng()
+      });
     });
   }
 
   ngOnInit() {
+
     this.view.onUpdate().subscribe(() => this.cdr.detectChanges());
-    this.service.init();
+    this.view.addObservable(this.terminalsService.terminals, 'terminals');
+    this.view.addObservable(this.terminalsService.found, 'found');
+
     this.styles = this.config.stylesConfig;
+    this.searchResult$ = this.state.terminals;
 
-    this.service.coordinates
-      .subscribe((coordinates: ICoordinates) => {
-        this.coordinates = coordinates;
-      });
+    this.searchResult$.pipe(
+      filter((result: ISearchResult) => {
+        if (!result.filters) {
+          return false;
+        }
+        const {radius, coordinates} = result.filters;
 
-    this.terminals$ = this.service.terminals$.pipe(
-      filter((terminals: ITerminalInfo[]) => {
-        return terminals.length > 0;
+        if (radius && radius.value > 0 && coordinates.source && coordinates.source !== 'mouse') {
+          return true;
+        }
+        return false;
       })
-    );
+    ).subscribe(() => {
 
-    this.service.terminals$
-      .pipe(
-        delay(1),
-        withLatestFrom(this.fitBounds.value$)
-      )
-      .subscribe((terminals: ITerminalInfo[]) => {
-
-        this.fitBounds.set(terminals.length > 0);
-
-      });
-
-    this.service.terminals$.pipe(
-      filter((terminals: ITerminalInfo[]) => !terminals || terminals.length === 0),
-      withLatestFrom(this.service.filters$, (_, filters: IFilters) => filters),
-      filter((filters: IFilters) => filters.coordinates.source !== 'init')
-    ).subscribe((filters: IFilters) => {
-      const config: IDistanceUnit = this.config.distanceUnits[filters.radius.unit];
-      let message: IMessageItem;
-
-      switch (filters.coordinates.source) {
-        case 'address':
-          message = TerminalMessages.terminalsByAddressNotFound(
-            filters.coordinates.address,
-            Math.round(filters.radius.value / config.dim),
-            filters.radius.label
-          );
-          break;
-        default:
-          message = TerminalMessages.terminalsNotFound(
-            Math.round(filters.radius.value / config.dim),
-            filters.radius.label
-          );
-      }
-      this.message$.next(message);
+      this.fitBounds.set(true);
     });
 
 
-    this.terminals$
-      .pipe(filter((_: ITerminalInfo[]) => !!this._markers))
-      .subscribe((terminals: ITerminalInfo[]) => {
+    this.searchResult$
+      .pipe(filter((_: ISearchResult) => !!this._markers))
+      .subscribe((result: ISearchResult) => {
 
         this._markers.forEach((marker: AgmMarker) => {
           marker.markerClick.subscribe(() => this.closeAllInfoWindows());

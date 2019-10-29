@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, NgModule, OnInit, Output} from '@angular/core';
+import {ChangeDetectorRef, Component, Inject, NgModule, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
-import {Observable} from 'rxjs';
-import {IMessageItem, IMessageWindowState, TButtonAction, TMessageType} from '../types';
+import {IMessageItem, TButtonAction, TMessageType} from '../types';
 import {buttonsCollection} from './messages.config';
+import {IMessageService, MESSAGE_SERVICE} from '../../services/message.service';
 
 
 @Component({
@@ -28,11 +28,7 @@ export class MessageWindowComponent implements OnInit {
   _message: IMessageItem;
 
 
-  @Input() message: Observable<IMessageItem>;
-
-  @Output() state: EventEmitter<IMessageWindowState> = new EventEmitter<IMessageWindowState>();
-
-  constructor() {
+  constructor(@Inject(MESSAGE_SERVICE) private service: IMessageService, private cdr: ChangeDetectorRef) {
   }
 
   dialogClass(type: TMessageType) {
@@ -42,7 +38,7 @@ export class MessageWindowComponent implements OnInit {
   close(action: TButtonAction) {
     this.display = false;
     this._message = this.cleanMessage();
-    this.state.emit({submitted: true, action});
+    this.service.close({submitted: true, action});
   }
 
   cleanMessage(): IMessageItem {
@@ -55,9 +51,10 @@ export class MessageWindowComponent implements OnInit {
 
   ngOnInit() {
     this._message = this.cleanMessage();
-    this.message.subscribe((message: IMessageItem) => {
+    this.service.onMessage.subscribe((message: IMessageItem) => {
       this._message = message;
       this.display = true;
+      this.cdr.detectChanges();
     });
   }
 

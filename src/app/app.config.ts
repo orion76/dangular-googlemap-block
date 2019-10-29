@@ -1,23 +1,28 @@
 import {IDistanceUnits, IFilters} from './components/types';
 import {InjectionToken} from '@angular/core';
 import {MapTypeStyle} from '@agm/core';
+import {IStateMap} from './services/state-map.service';
 
 export const APP_CONFIG = new InjectionToken<IAppConfig>('APP_CONFIG');
 
 export interface IAppConfig {
-  zoom: number;
-  filters: IFilters;
+  map: IStateMap;
+  filtersDefault: IFilters;
+  filtersInit: Partial<IFilters>;
   distanceUnits: IDistanceUnits;
   stylesConfig: MapTypeStyle[];
 }
 
 
 export const appConfig: IAppConfig = {
-  zoom: 20,
-  filters: {
-    radius: {unit: 'mile', value: 10},
-    coordinates: {source: 'init', latitude: 40.666738, longitude: -74.214917},
+  map: {zoom: 8},
+  filtersDefault: {
+    radius: {unit: 'mile', value: 10, min: 0, max: 100},
+    coordinates: { latitude: 40.666738, longitude: -74.214917},
     terminalFilters: {buy: false, sell: false, open: false}
+  },
+  filtersInit: {
+    radius: {unit: 'mile', value: 0},
   },
   distanceUnits: {
     km: {type: 'km', name: 'Kilometer', dim: 1},

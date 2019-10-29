@@ -8,27 +8,5 @@ export const buttonsCollection: Record<TButtonAction, IButton> = {
 
 
 export class TerminalMessages {
-  static terminalsByAddressNotFound(address: string, radius: number, radiusUnit: string): IMessageItem {
-    const title = 'Terminals not found';
-    const message = `no terminals within ${radius} ${radiusUnit} of ${address}`;
 
-    const buttons: IButton[] = [
-      buttonsCollection.back,
-      buttonsCollection.close
-    ];
-
-    return {type: 'warning', title, message, buttons};
-  }
-
-  static terminalsNotFound(radius: number, radiusUnit: string): IMessageItem {
-    const title = 'Terminals not found';
-    const message = `no terminals within ${radius} ${radiusUnit} `;
-
-    const buttons: IButton[] = [
-      buttonsCollection.back,
-      buttonsCollection.close
-    ];
-
-    return {type: 'warning', title, message, buttons};
-  }
 }

@@ -21,7 +21,7 @@ export class FitBoundsService implements IFitBoundsService {
   _source$: Observable<TCoordinatesSource>;
 
   constructor() {
-    this._value = new BehaviorSubject<boolean>(true);
+    this._value = new BehaviorSubject<boolean>(false);
     this._source = new BehaviorSubject<TCoordinatesSource>('init');
     this._value$ = this._value.asObservable();
     this._source$ = this._source.asObservable();
@@ -37,7 +37,6 @@ export class FitBoundsService implements IFitBoundsService {
   }
 
   _isFitBounds(source: TCoordinatesSource, value: boolean) {
-
     switch (source) {
       case 'mouse':
         value = false;

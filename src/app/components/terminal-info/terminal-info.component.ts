@@ -1,7 +1,7 @@
 import {ChangeDetectorRef, Component, Inject, Input, NgModule, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {TERMINAL_FILTER_SERVICE} from '../../services/terminal-filter.service';
-import {IEntity, ITerminalFilterService, ITerminalInfo, ITerminalPrice} from '../types';
+import {ICoin, IEntity, ITerminalFilterService, ITerminalInfo, ITerminalPrice} from '../types';
 import {APP_CONFIG, IAppConfig} from '../../app.config';
 import {TerminalCoinPricesModule} from '../terminal-coin-prices/terminal-coin-prices.component';
 import {TerminalLimitModule} from '../terminal-limits/terminal-limits.component';
@@ -27,12 +27,12 @@ import {AccordionModule} from 'primeng/accordion';
           <p-accordionTab *ngFor="let coin of coins" [header]="coin.name" [selected]="coin.name==='Bitcoin'">
               <div *ngIf="isHasAction(coin._id,'buy')">
                   <div class="label">Buy</div>
-                  <terminal-coin-prices coin="BTC" fiat="USD"
+                  <terminal-coin-prices [coin]="coin.code" [fiat]="terminal.currency.name"
                                         [prices]="getPrices(coin._id,'buy')"></terminal-coin-prices>
               </div>
               <div *ngIf="isHasAction(coin._id,'sell')">
                   <div class="label">Sell</div>
-                  <terminal-coin-prices coin="BTC" fiat="USD"
+                  <terminal-coin-prices [coin]="coin.code" [fiat]="terminal.currency.name"
                                         [prices]="getPrices(coin._id,'sell')"></terminal-coin-prices>
               </div>
           </p-accordionTab>
@@ -53,7 +53,7 @@ export class TerminalInfoComponent implements OnInit {
   ) {
   }
 
-  private _coins: Record<string, IEntity> = {};
+  private _coins: Record<string, ICoin> = {};
 
   get coins() {
     return Object.values(this._coins);

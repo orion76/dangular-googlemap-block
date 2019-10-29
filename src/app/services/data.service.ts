@@ -17,7 +17,7 @@ export interface IBackendConfig {
 }
 
 export const backendConfig: IBackendConfig = {
-  url: 'coin.ti-work.site'
+  url: 'crypto-dev1.ti-work.site'
 };
 
 export interface ISources {
@@ -61,11 +61,12 @@ export class DataService implements IDataService {
   }
 
   loadItems(source: string, filters?: IFilters): Observable<any> {
+
     const config: ISource = sourcesConfig[source];
-    let params: IParams = {};
-    params = this.createRadiusParams(filters);
-    params = {...params, ...this.createActionParams(filters)};
-    // const params: IParams = {_format: 'json'};
+    const params: IParams = {_format: 'json'};
+
+    this.addCoordinateParams(params, filters);
+    this.addActionParams(params, filters);
 
     return this.http.get(this.createUrl(config.entrypoint), {params});
   }
@@ -90,10 +91,13 @@ export class DataService implements IDataService {
     return val !== null && val !== undefined;
   }
 
-  createActionParams(filters: IFilters): IParams {
+  addActionParams(params: IParams, filters: IFilters): void {
+
+    if (!filters.terminalFilters) {
+      return;
+    }
 
     const {buy, sell, open} = filters.terminalFilters;
-    const params: IParams = {};
 
     if (buy !== sell) {
       if (buy) {
@@ -108,21 +112,17 @@ export class DataService implements IDataService {
     if (this._isNotEmpty(open)) {
       params.open = String(open);
     }
-
-
-    return params;
   }
 
-  createRadiusParams(filters: IFilters): IParams {
+  addCoordinateParams(params: IParams, filters: IFilters): void {
 
-    const {latitude, longitude} = filters.coordinates;
+    if (filters.coordinates) {
+      params['current[lat]'] = String(filters.coordinates.latitude);
+      params['current[lon]'] = String(filters.coordinates.longitude);
+    }
+    if (filters.radius) {
+      params.radius = String(filters.radius.value);
+    }
 
-    const params: IParams = {
-      radius: String(filters.radius.value),
-      'current[lat]': String(latitude),
-      'current[lon]': String(longitude),
-      _format: 'json'
-    };
-    return params;
   }
 }
