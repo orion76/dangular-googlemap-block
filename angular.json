@@ -50,7 +50,8 @@
                 "node_modules/primeng/resources/primeng.css"
               ],
               "assets": [
-   
+                "src/assets",
+                "src/favicon.ico"
               ],
               "extractLicenses": true,
               "vendorChunk": false,
