@@ -14,7 +14,6 @@ import {Component, OnInit} from '@angular/core';
                     draggable="true"
                     positionTop="0"
                     [positionLeft]="positionLeft"
-                    appendTo="google-map"
                     [autoZIndex]="autoZIndex"
           >
               <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>
