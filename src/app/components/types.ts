@@ -20,14 +20,19 @@ export type IDistanceUnits = {
 
 export interface ITerminalFilterService {
   search(filtersNew: Partial<IFilters>);
+
   searchAddress(coordinates: ICoordinates);
+
   searchCoordinates(coordinates: ICoordinates);
 
   searchRadius(radius: IRadiusValue);
+
   searchRadiusUnit(unit: TRadiusUnits);
+
   searchTerminalFilters(terminalFilters: ITerminalFilters);
 
   back();
+
   start();
 }
 
@@ -73,6 +78,10 @@ export interface IEntity {
   name: string;
 }
 
+export interface ITerminalState extends IEntity {
+  icon: string;
+}
+
 export interface ITerminalInfo extends IEntity {
   address: string;
   latitude: number;
@@ -82,6 +91,7 @@ export interface ITerminalInfo extends IEntity {
   action_sell: boolean;
   limits: ITerminalLimit[];
   currency: IEntity;
+  state: ITerminalState;
 
   showPrice(prices: ITerminalPrice[]);
 }

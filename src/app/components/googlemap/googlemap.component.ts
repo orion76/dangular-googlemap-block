@@ -56,7 +56,7 @@ import {ITerminalsService, TERMINALS_SERVICE} from '../../services/terminals.ser
                           [longitude]="terminal.longitude"
                           [visible]="true"
                           [title]="terminal.name"
-                          [iconUrl]="terminal.icon"
+                          [iconUrl]="terminal.state.icon"
                           [agmFitBounds]="true"
                           (markerClick)="onMarkerClick(terminal)"
               >
