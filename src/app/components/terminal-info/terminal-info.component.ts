@@ -23,7 +23,7 @@ import {AccordionModule} from 'primeng/accordion';
           <h4>Limits</h4>
           <terminal-limits *ngFor="let limit of terminal.limits" [limit]="limit"></terminal-limits>
       </div>
-      <p-accordion  class="coin-prices">
+      <p-accordion class="coin-prices">
           <p-accordionTab *ngFor="let coin of coins" [header]="coin.name" [selected]="coin.name==='Bitcoin'">
               <div *ngIf="isHasAction(coin._id,'buy')">
                   <div class="label">Buy</div>
@@ -64,7 +64,12 @@ export class TerminalInfoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.terminal.showPrice = (price: ITerminalPrice[]) => this.showPrice(price);
+    
+    this.terminal.showPrice = (price: ITerminalPrice[]) => {
+      if (this.terminal.show_price) {
+        this.showPrice(price);
+      }
+    };
     this.rowAddress.label = 'Address';
     this.rowAddress.value = this.terminal.address;
 
@@ -107,27 +112,6 @@ export class TerminalInfoComponent implements OnInit {
       this._prices[coinId][action] = this._prices[coinId][action].concat(item.prices);
     });
     this.cdr.detectChanges();
-    // const coins: Record<string, ICoinPrice[]> = {};
-    // coins_data.forEach((coin_data: ITerminalPrice) => {
-    //   const coinId = coin_data.coin._id;
-    //   coin_data.prices.forEach((price: ITerminalPriceItem) => {
-    //     if (!coins[coinId]) {
-    //       coins[coinId] = [];
-    //     }
-    //     coins[coinId].push({
-    //       coinCode: 'BTC',
-    //       fiatCode: '$',
-    //       from: price.from,
-    //       rate: price.rate
-    //     });
-    //   });
-    //
-    // });
-
-  }
-
-  addCoinPrice() {
-
   }
 }
 

@@ -92,6 +92,7 @@ export interface ITerminalInfo extends IEntity {
   limits: ITerminalLimit[];
   currency: IEntity;
   state: ITerminalState;
+  show_price: boolean;
 
   showPrice(prices: ITerminalPrice[]);
 }
