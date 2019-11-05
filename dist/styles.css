@@ -5502,10 +5502,10 @@ input[type=text]::-ms-clear {
   background-image: url('map-point-green.png');
 }
 .legend__item.-forBuyingSelling::before {
-  background-image: url('map-point-red.png');
+  background-image: url('map-point-blue.png');
 }
 .legend__item.-closed::before {
-  background-image: url('map-point-blue.png');
+  background-image: url('map-point-red.png');
 }
 .legend__item::before {
   content: "";
