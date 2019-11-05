@@ -133,12 +133,12 @@
 
 .legend__item.-forBuyingSelling::before {
 
-  background-image: url(scss/images/map-point-red.png);
+  background-image: url(scss/images/map-point-blue.png);
 }
 
 .legend__item.-closed::before {
 
-  background-image: url(scss/images/map-point-blue.png);
+  background-image: url(scss/images/map-point-red.png);
 }
 
 .legend__item::before {

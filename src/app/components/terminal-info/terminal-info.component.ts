@@ -64,7 +64,7 @@ export class TerminalInfoComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+
     this.terminal.showPrice = (price: ITerminalPrice[]) => {
       if (this.terminal.show_price) {
         this.showPrice(price);
