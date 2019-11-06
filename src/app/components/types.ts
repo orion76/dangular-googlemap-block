@@ -34,10 +34,11 @@ export interface ITerminalFilterService {
   back();
 
   start();
+  init();
 }
 
 export type TCoordinatesSource = 'init' | 'back' | 'address' | 'mouse' | 'radius' | 'near-me';
-export type TFilterSource = 'config' | 'form' | 'input';
+
 
 export interface ICoordinates {
   latitude: number;
@@ -70,6 +71,7 @@ export interface IFilters {
 export interface IUserInput {
   radiusUnit?: TRadiusUnits;
 }
+
 
 
 export interface IEntity {

@@ -149,9 +149,10 @@ export class TerminalFilterFormComponent implements OnInit {
 
   searchClear() {
     if (this.form.get('address').value.length > 0) {
-      this.service.start();
+
       this.form.get('address').setValue('');
     }
+    this.service.start();
   }
 
   createRadiusOptions(): ISelectOption[] {
@@ -210,7 +211,7 @@ export class TerminalFilterFormComponent implements OnInit {
 
     this.form.get('radius').patchValue(filters.radius, {emitEvent: false});
     this.form.get('terminalFilters').patchValue(filters.terminalFilters, {emitEvent: false});
-
+    this.service.init();
     this.service.search(filters);
 
 

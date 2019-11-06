@@ -49,7 +49,7 @@ import {ITerminalsService, TERMINALS_SERVICE} from '../../services/terminals.ser
           <agm-marker-cluster
                   imagePath="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"
                   imageExtension="png"
-                  maxZoom="20"
+                  maxZoom="10"
           >
               <agm-marker *ngFor="let terminal of (searchResult$ | async).terminals"
                           [latitude]="terminal.latitude"
@@ -60,7 +60,7 @@ import {ITerminalsService, TERMINALS_SERVICE} from '../../services/terminals.ser
                           [agmFitBounds]="true"
                           (markerClick)="onMarkerClick(terminal)"
               >
-                  <agm-info-window>
+                  <agm-info-window (infoWindowClose)="onInfoWindowClose()">
                       <terminal-info [terminal]="terminal"></terminal-info>
                   </agm-info-window>
               </agm-marker>
@@ -118,8 +118,13 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
     this.closeAllInfoWindows();
     this.data.loadTerminalPrices('terminal_prices', terminal._id)
       .subscribe((prices: ITerminalPrice[]) => {
+        this.state.setMap('displayTerminalInfo', true);
         terminal.showPrice(prices);
       });
+  }
+
+  onInfoWindowClose() {
+    this.state.setMap('displayTerminalInfo', false);
   }
 
   onMapReady(map) {
@@ -127,13 +132,13 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
     this._map = map;
 
     this._map.addListener('dragend', () => {
-      const coordinates: LatLng = this._map.getCenter();
-
-      this.service.searchCoordinates({
-
-        latitude: coordinates.lat(),
-        longitude: coordinates.lng()
-      });
+      // const coordinates: LatLng = this._map.getCenter();
+      // this.state.setCoordinates({
+      //     source: 'mouse',
+      //     latitude: coordinates.lat(),
+      //     longitude: coordinates.lng()
+      //   }
+      // );
     });
   }
 
@@ -186,6 +191,7 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
 
   private closeAllInfoWindows() {
     this.infoWindows.forEach((info: AgmInfoWindow) => info.close());
+    this.state.setMap('displayTerminalInfo', true);
   }
 
 

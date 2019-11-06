@@ -15,10 +15,10 @@ export interface IAppConfig {
 
 
 export const appConfig: IAppConfig = {
-  map: {zoom: 8},
+  map: {zoom: 8, displayTerminalInfo: false},
   filtersDefault: {
     radius: {unit: 'mile', value: 10, min: 0, max: 100},
-    coordinates: { latitude: 40.666738, longitude: -74.214917},
+    coordinates: {latitude: 40.666738, longitude: -74.214917},
     terminalFilters: {buy: false, sell: false, open: false}
   },
   filtersInit: {

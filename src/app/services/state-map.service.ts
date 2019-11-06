@@ -8,6 +8,7 @@ import {createFiltersConfig, isEqualCoordinates, isEqualMapState, isEqualRadius}
 
 export interface IStateMap {
   zoom: number;
+  displayTerminalInfo: boolean;
 }
 
 export interface IStateMapService {
@@ -17,7 +18,7 @@ export interface IStateMapService {
   readonly radius: Observable<IRadiusValue>;
   readonly circle: Observable<ICoordinates>;
 
-  setMap(state: Partial<IStateMap>);
+  setMap<K extends keyof IStateMap>(state: K, value: IStateMap[K]);
 
 
   setCoordinates(coordinates: ICoordinates);
@@ -47,6 +48,7 @@ export class StateMapService implements IStateMapService {
   private readonly _coordinates: Observable<ICoordinates>;
   private readonly _circle: Observable<ICoordinates>;
   private readonly _radius: Observable<IRadiusValue>;
+  private _mapState: IStateMap;
 
   constructor(@Inject(APP_CONFIG) private config: IAppConfig) {
     this._terminalsSubject = new BehaviorSubject<ISearchResult>({terminals: [], filters: null});
@@ -63,7 +65,10 @@ export class StateMapService implements IStateMapService {
 
     this._radiusSubject = new BehaviorSubject<IRadiusValue>(createFiltersConfig('radius', this.config));
     this._radius = this._radiusSubject.asObservable().pipe(distinctUntilChanged(isEqualRadius));
-    this._mapSubject = new BehaviorSubject<IStateMap>(config.map);
+
+    this._mapState = config.map;
+
+    this._mapSubject = new BehaviorSubject<IStateMap>(this._mapState);
     this._map = this._mapSubject.asObservable().pipe(distinctUntilChanged(isEqualMapState));
   }
 
@@ -99,8 +104,9 @@ export class StateMapService implements IStateMapService {
     this._circleSubject.next(coordinates);
   }
 
-  setMap(state: IStateMap) {
-    this._mapSubject.next(state);
+  setMap<K extends keyof IStateMap>(state: K, value: IStateMap[K]) {
+    this._mapState[state] = value;
+    this._mapSubject.next(this._mapState);
   }
 
   setRadius(radius: IRadiusValue) {

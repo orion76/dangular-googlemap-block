@@ -13,13 +13,14 @@ import {Observable, Subscription} from 'rxjs';
 import {IViewUpdateService, VIEW_UPDATE_SERVICE} from './view-update.service';
 import {FIT_BOUNDS_SERVICE, IFitBoundsService} from './fitbounds.service';
 import {STATE_FILTERS_SERVICE} from './state-filters.service';
-import {IStateMapService, STATE_MAP_SERVICE} from './state-map.service';
+import {IStateMap, IStateMapService, STATE_MAP_SERVICE} from './state-map.service';
 import {ISearchHistoryService, SEARCH_HISTORY_SERVICE} from './search-history.service';
 import {ITerminalsService, TERMINALS_SERVICE} from './terminals.service';
 import {APP_CONFIG, IAppConfig} from '../app.config';
 import {createFiltersConfig} from './utils';
 import {IStateFiltersService} from './types';
 import {IMessageService, MESSAGE_SERVICE} from './message.service';
+import {filter, withLatestFrom} from 'rxjs/operators';
 
 export const TERMINAL_FILTER_SERVICE = new InjectionToken('TERMINAL_FILTER_SERVICE');
 
@@ -43,6 +44,22 @@ export class TerminalFilterService implements ITerminalFilterService {
 
   }
 
+  init() {
+    this.map.coordinates
+      .pipe(
+        withLatestFrom(this.map.map, (coordinates: ICoordinates, state: IStateMap) => {
+            if (state.displayTerminalInfo) {
+              return null;
+            }
+            return coordinates;
+          }
+        ),
+        filter(Boolean)
+      )
+      .subscribe((coordinates: ICoordinates) => {
+        this.searchCoordinates(coordinates);
+      });
+  }
 
   _prepareCoordinates(coordinates: ICoordinates): ICoordinates {
     const {latitude, longitude} = coordinates;

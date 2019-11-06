@@ -28,14 +28,21 @@ export interface IStateFiltersService {
   readonly onChangeCoordinates: Observable<ICoordinates>;
   readonly onChangeTerminalFilters: Observable<ITerminalFilters>;
 
+
   hasInput(name: keyof IUserInput): boolean;
 
   hasFilter(name: keyof IFilters): boolean;
+
   setFilter<K extends keyof IFilters>(name: K, value: IFilters[K]);
+
   getInput<K extends keyof IUserInput>(name: K): IUserInput[K];
 
   setInput<K extends keyof IUserInput>(name: K, value: IUserInput[K]);
+
   getFilters(): IFilters;
+
   getFilter<K extends keyof IFilters>(name: K): IFilters[K];
+
+
 }
 

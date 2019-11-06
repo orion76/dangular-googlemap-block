@@ -3,7 +3,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {distinctUntilChanged, filter, map} from 'rxjs/operators';
 import {Inject, InjectionToken} from '@angular/core';
 import {APP_CONFIG, IAppConfig} from '../app.config';
-import {createFiltersConfig, isEmpty, isEqualCoordinates, isEqualRadius, isEqualTerminalFilters} from './utils';
+import {createFiltersConfig, isEmpty, isEqualCoordinates} from './utils';
 import {IStateFiltersService} from './types';
 
 
@@ -14,7 +14,8 @@ export class StateFiltersService implements IStateFiltersService {
   private _userInput: IUserInput;
 
   private _filtersSuccessSubject: BehaviorSubject<IFilters>;
-  private readonly _filtersSuccess: Observable<IFilters>;
+  private _filtersSuccess: Observable<IFilters>;
+
 
 
   constructor(@Inject(APP_CONFIG) private config: IAppConfig) {
@@ -23,8 +24,13 @@ export class StateFiltersService implements IStateFiltersService {
     this._filtersSuccessSubject = new BehaviorSubject<IFilters>(this._lastSuccess);
     this._filtersSuccess = this._filtersSuccessSubject.asObservable();
 
+
+
+
     this._userInput = {};
   }
+
+
 
   get onChangeCoordinates(): Observable<ICoordinates> {
     return this._filtersSuccess.pipe(
