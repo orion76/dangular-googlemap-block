@@ -24,7 +24,11 @@ import {AccordionModule} from 'primeng/accordion';
           <terminal-limits *ngFor="let limit of terminal.limits" [limit]="limit"></terminal-limits>
       </div>
       <p-accordion class="coin-prices">
-          <p-accordionTab *ngFor="let coin of coins" [header]="coin.name" [selected]="coin.name==='Bitcoin'">
+          <p-accordionTab *ngFor="let coin of coins" >
+              <p-header>
+                  <img class="coin-icon" [alt]="coin.name" [src]="coin.icon"/>
+                  <h4 class="coin-name">{{coin.name}}</h4>
+              </p-header>
               <div *ngIf="isHasAction(coin._id,'buy')">
                   <div class="label">Buy</div>
                   <terminal-coin-prices [coin]="coin.code" [fiat]="terminal.currency.name"

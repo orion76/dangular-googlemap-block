@@ -60,7 +60,7 @@ import {ITerminalsService, TERMINALS_SERVICE} from '../../services/terminals.ser
                           [agmFitBounds]="true"
                           (markerClick)="onMarkerClick(terminal)"
               >
-                  <agm-info-window (infoWindowClose)="onInfoWindowClose()">
+                  <agm-info-window (infoWindowClose)="onInfoWindowClose()" >
                       <terminal-info [terminal]="terminal"></terminal-info>
                   </agm-info-window>
               </agm-marker>

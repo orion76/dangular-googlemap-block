@@ -5755,6 +5755,15 @@ input[type=text]::-ms-clear {
   width: 100%;
   min-width: 100%;
 }
+.ui-accordion-header .coin-icon {
+  display: inline-block;
+  width: 1.6em;
+}
+.ui-accordion-header .coin-name {
+  display: inline-block;
+  vertical-align: super;
+  padding-left: 0.5em;
+}
 span.ui-slider-handle.ui-state-default.ui-corner-all.ui-clickable.ng-star-inserted {
   background-color: #79f;
   border: 1px solid #57a;
@@ -5786,11 +5795,11 @@ agm-map {
 .terminal-coin-prices .info-row .label {
   font-weight: bold;
 }
-.terminal-info .info-row {
+terminal-info .info-row {
   display: grid;
   grid-template-columns: 12em 16em;
 }
-.terminal-info .info-row .label {
+terminal-info .info-row .label {
   font-weight: bold;
 }
 .terminal-limits .info-row {

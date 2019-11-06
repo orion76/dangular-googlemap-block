@@ -34,6 +34,7 @@ export interface ITerminalFilterService {
   back();
 
   start();
+
   init();
 }
 
@@ -71,7 +72,6 @@ export interface IFilters {
 export interface IUserInput {
   radiusUnit?: TRadiusUnits;
 }
-
 
 
 export interface IEntity {
@@ -112,6 +112,7 @@ export interface ITerminalPriceItem extends IEntity {
 
 export interface ICoin extends IEntity {
   code: string;
+  icon: string;
 }
 
 export interface ITerminalPrice extends IEntity {

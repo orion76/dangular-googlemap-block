@@ -2,6 +2,22 @@
 @import "components/legend";
 @import "components/slide-checkbox";
 @import "components/dropdown";
+
+.ui-accordion-header{
+  .coin-icon {
+    display: inline-block;
+    width: 1.6em;
+  }
+  .coin-name{
+    display: inline-block;
+    vertical-align: super;
+    padding-left: .5em;
+
+  }
+}
+
+
+
 span.ui-slider-handle.ui-state-default.ui-corner-all.ui-clickable.ng-star-inserted{
   background-color: #79f;
   border: 1px solid #57a;
@@ -51,7 +67,7 @@ agm-map {
 
 }
 
-.terminal-info{
+terminal-info{
   .info-row {
     display: grid;
     grid-template-columns: 12em 16em;
