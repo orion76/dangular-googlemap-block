@@ -24,17 +24,17 @@ import {AccordionModule} from 'primeng/accordion';
           <terminal-limits *ngFor="let limit of terminal.limits" [limit]="limit"></terminal-limits>
       </div>
       <p-accordion class="coin-prices">
-          <p-accordionTab *ngFor="let coin of coins" >
+          <p-accordionTab *ngFor="let coin of coins" [disabled]="!terminal.show_price">
               <p-header>
                   <img class="coin-icon" [alt]="coin.name" [src]="coin.icon"/>
                   <h4 class="coin-name">{{coin.name}}</h4>
               </p-header>
-              <div *ngIf="isHasAction(coin._id,'buy')">
+              <div *ngIf="isHasAction(coin._id,'buy') && terminal.show_price">
                   <div class="label">Buy</div>
                   <terminal-coin-prices [coin]="coin.code" [fiat]="terminal.currency.name"
                                         [prices]="getPrices(coin._id,'buy')"></terminal-coin-prices>
               </div>
-              <div *ngIf="isHasAction(coin._id,'sell')">
+              <div *ngIf="isHasAction(coin._id,'sell') && terminal.show_price">
                   <div class="label">Sell</div>
                   <terminal-coin-prices [coin]="coin.code" [fiat]="terminal.currency.name"
                                         [prices]="getPrices(coin._id,'sell')"></terminal-coin-prices>
@@ -70,9 +70,7 @@ export class TerminalInfoComponent implements OnInit {
   ngOnInit() {
 
     this.terminal.showPrice = (price: ITerminalPrice[]) => {
-      if (this.terminal.show_price) {
-        this.showPrice(price);
-      }
+      this.showPrice(price);
     };
     this.rowAddress.label = 'Address';
     this.rowAddress.value = this.terminal.address;

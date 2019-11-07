@@ -16,6 +16,7 @@ import {ICoinPrice} from '../types';
 
 export class TerminalCoinPricesComponent implements OnInit {
 
+
   @Input() prices: ICoinPrice[];
   @Input() fiat: string;
   @Input() coin: string;
