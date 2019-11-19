@@ -1,13 +1,13 @@
 import {Component, Input, NgModule, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ICoinPrice, ITerminalLimit} from '../types';
+import {ITerminalLimit} from '../types';
 
 
 @Component({
   selector: 'terminal-limits',
   template: `
       <div class="info-row">
-          <div class="label">{{limit.summ}}</div>
+          <div class="label">{{fiat}}{{limit.summ}}</div>
           <div class="value">
               <div class="types" *ngFor="let type of limit.types">{{type.name}}</div>
           </div>
@@ -18,7 +18,7 @@ import {ICoinPrice, ITerminalLimit} from '../types';
 export class TerminalLimitsComponent implements OnInit {
 
   @Input() limit: ITerminalLimit;
-
+  @Input() fiat: string;
   debug(...vars: any[]) {
     // console.log('[GoogleMapComponent]', ...vars);
   }

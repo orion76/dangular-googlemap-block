@@ -1,15 +1,15 @@
 import {Component, Input, NgModule, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ICoinPrice} from '../types';
+import {ITerminalPriceItem} from '../types';
 
 
 @Component({
   selector: 'terminal-coin-prices',
   template: `
 
-      <div *ngFor="let price of prices" class="info-row">
-          <div>from {{price.from | number:'1.2-2'}} {{fiat}}</div>
-          <div class="value">1 {{coin}}={{price.rate | number:'1.2-2'}} {{fiat }}</div>
+      <div *ngFor="let price of prices" class="info-row terminal-price-type__item terminal-price-item">
+          <div class="terminal-price-item__from">from  {{fiat}}{{price.from | number:'1.2-2'}}<span class="arrow">-></span></div>
+          <div class="terminal-price-item__value">1 {{coin}}={{fiat }}{{price.rate | number:'1.2-2'}} </div>
       </div>
   `,
 })
@@ -17,7 +17,7 @@ import {ICoinPrice} from '../types';
 export class TerminalCoinPricesComponent implements OnInit {
 
 
-  @Input() prices: ICoinPrice[];
+  @Input() prices: ITerminalPriceItem[];
   @Input() fiat: string;
   @Input() coin: string;
 

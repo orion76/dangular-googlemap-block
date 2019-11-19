@@ -8,17 +8,21 @@ import {Component, OnInit} from '@angular/core';
           <p-button (onClick)="showFilters()" label="Filters" type="button"
                     [ngStyle]="filtersDisplay?{'display':'none'}:null">
           </p-button>
-          <p-dialog header="Filters"
-                    [(visible)]="filtersDisplay"
-                    closable="true"
-                    draggable="true"
-                    positionTop="0"
-                    [positionLeft]="positionLeft"
-                    [autoZIndex]="autoZIndex"
-          >
-              <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>
-          </p-dialog>
-
+<!--          <p-dialog header="Filters"-->
+<!--                    [(visible)]="filtersDisplay"-->
+<!--                    closable="true"-->
+<!--                    draggable="true"-->
+<!--                    positionTop="0"-->
+<!--                    [positionLeft]="positionLeft"-->
+<!--                    [autoZIndex]="autoZIndex"-->
+<!--          >-->
+<!--              <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>-->
+<!--          </p-dialog>-->
+          <p-accordion class="terminal-filter-form-wrapper" >
+              <p-accordionTab header="Filters" [selected]="true">
+                  <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>
+              </p-accordionTab>
+          </p-accordion>
       </div>
       <div class="legend block container">
           <div class="block-content legend__content">

@@ -248,8 +248,6 @@ export class TerminalFilterService implements ITerminalFilterService {
             }
             this.state.setFilter('radius', {value: 0, unit});
           }
-        } else {
-          debugger;
         }
       });
   }

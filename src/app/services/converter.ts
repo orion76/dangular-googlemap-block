@@ -36,9 +36,6 @@ export function extractRelationships(all: Map<string, IJSONAPIEntity>, entity: I
   const relationships: Record<string, IJSONAPIEntity[]> = {};
 
   Object.keys(entity.relationships).forEach((field: string) => {
-    if (field === 'coin') {
-      debugger;
-    }
     relationships[field] = [];
 
     const dataOld: IJSONAPIEntity[] = entity.relationships[field].data as IJSONAPIEntity[];

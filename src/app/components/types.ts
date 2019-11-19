@@ -1,3 +1,5 @@
+import {IPlaceResult} from '../services/google.service';
+
 export type TRadiusUnits = 'km' | 'mile';
 
 export interface ITerminalFilters {
@@ -84,6 +86,10 @@ export interface ITerminalState extends IEntity {
   icon: string;
 }
 
+export interface ICurrency extends IEntity {
+  symbol: string;
+}
+
 export interface ITerminalInfo extends IEntity {
   address: string;
   latitude: number;
@@ -92,11 +98,12 @@ export interface ITerminalInfo extends IEntity {
   action_buy: boolean;
   action_sell: boolean;
   limits: ITerminalLimit[];
-  currency: IEntity;
+  currency: ICurrency;
   state: ITerminalState;
   show_price: boolean;
 
   showPrice(prices: ITerminalPrice[]);
+  showPlace(place: IPlaceResult);
 }
 
 export interface ITerminalLimit extends IEntity {

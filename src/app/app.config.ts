@@ -6,6 +6,7 @@ import {IStateMap} from './services/state-map.service';
 export const APP_CONFIG = new InjectionToken<IAppConfig>('APP_CONFIG');
 
 export interface IAppConfig {
+  apiKeys: { [key: string]: string };
   map: IStateMap;
   filtersDefault: IFilters;
   filtersInit: Partial<IFilters>;
@@ -15,6 +16,9 @@ export interface IAppConfig {
 
 
 export const appConfig: IAppConfig = {
+  apiKeys: {
+    google: 'AIzaSyAeK50XUYcxCwBDAEK0MAbTKi5zFpRhXqY'
+  },
   map: {zoom: 8, displayTerminalInfo: false},
   filtersDefault: {
     radius: {unit: 'mile', value: 10, min: 0, max: 100},

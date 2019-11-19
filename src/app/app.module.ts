@@ -21,6 +21,8 @@ import {STATE_MAP_SERVICE, StateMapService} from './services/state-map.service';
 import {STATE_FILTERS_SERVICE, StateFiltersService} from './services/state-filters.service';
 import {SEARCH_HISTORY_SERVICE, SearchHistoryService} from './services/search-history.service';
 import {TERMINALS_SERVICE, TerminalsService} from './services/terminals.service';
+import {GOOGLE_API_SERVICE, GoogleApiService} from './services/google.service';
+import {AccordionModule} from 'primeng/accordion';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,15 @@ import {TERMINALS_SERVICE, TerminalsService} from './services/terminals.service'
     BrowserAnimationsModule,
     HttpClientModule,
     GoogleMapModule,
-    AgmCoreModule.forRoot({apiKey: 'AIzaSyAeK50XUYcxCwBDAEK0MAbTKi5zFpRhXqY', libraries: ['places']}),
+    AgmCoreModule.forRoot({apiKey: appConfig.apiKeys.google, libraries: ['places']}),
     TerminalFilterFormModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    AccordionModule
   ],
   providers: [
+
+    {provide: GOOGLE_API_SERVICE, useClass: GoogleApiService},
     {provide: VIEW_UPDATE_SERVICE, useClass: ViewUpdateService},
     {provide: FIT_BOUNDS_SERVICE, useClass: FitBoundsService},
     {provide: APP_CONFIG, useValue: appConfig},

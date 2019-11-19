@@ -1,5 +1,5 @@
 import {ICoordinates, IFilters, IRadiusValue, ITerminalInfo} from '../components/types';
-import {BehaviorSubject, Observable} from 'rxjs';
+import {BehaviorSubject, Observable, Subject} from 'rxjs';
 import {distinctUntilChanged} from 'rxjs/operators';
 import {Inject, InjectionToken} from '@angular/core';
 import {APP_CONFIG, IAppConfig} from '../app.config';
@@ -20,7 +20,8 @@ export interface IStateMapService {
 
   setMap<K extends keyof IStateMap>(state: K, value: IStateMap[K]);
 
-
+  markerClick(terminal: ITerminalInfo);
+  onMarkerClick(): Observable<ITerminalInfo>;
   setCoordinates(coordinates: ICoordinates);
 
   setCircle(coordinates: ICoordinates);
@@ -48,6 +49,7 @@ export class StateMapService implements IStateMapService {
   private readonly _coordinates: Observable<ICoordinates>;
   private readonly _circle: Observable<ICoordinates>;
   private readonly _radius: Observable<IRadiusValue>;
+  private readonly _markerClick: Subject<ITerminalInfo>;
   private _mapState: IStateMap;
 
   constructor(@Inject(APP_CONFIG) private config: IAppConfig) {
@@ -70,6 +72,8 @@ export class StateMapService implements IStateMapService {
 
     this._mapSubject = new BehaviorSubject<IStateMap>(this._mapState);
     this._map = this._mapSubject.asObservable().pipe(distinctUntilChanged(isEqualMapState));
+
+    this._markerClick = new Subject<ITerminalInfo>();
   }
 
   get map(): Observable<IStateMap> {
@@ -90,6 +94,14 @@ export class StateMapService implements IStateMapService {
 
   get terminals(): Observable<ISearchResult> {
     return this._terminals;
+  }
+
+  markerClick(terminal: ITerminalInfo) {
+    this._markerClick.next(terminal);
+  }
+
+  onMarkerClick(): Observable<ITerminalInfo> {
+    return this._markerClick.asObservable();
   }
 
   setTerminals(result: ISearchResult) {

@@ -3,8 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {IFilters} from '../components/types';
 import {extractRelationships, itemToArray, normalizeReference} from './converter';
-import {map, switchMap} from 'rxjs/operators';
-import {IEntity, IJSONAPIEntity} from './types';
+import {IJSONAPIEntity} from './types';
 
 
 export interface ISource {
@@ -52,7 +51,6 @@ export class DataService implements IDataService {
   }
 
   convert(response: any): Observable<any> {
-    debugger;
     const entities = itemToArray(response.data);
     const includes = response.included ? response.included : [];
     const entitiesMap = normalizeReference(entities.concat(includes));

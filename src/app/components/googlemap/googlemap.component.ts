@@ -11,7 +11,7 @@ import {
   ViewChildren
 } from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {AgmCoreModule, AgmInfoWindow, AgmMap, AgmMarker, LatLng, MapTypeStyle} from '@agm/core';
+import {AgmCoreModule, AgmInfoWindow, AgmMap, AgmMarker, MapTypeStyle} from '@agm/core';
 import {DATA_SERVICE, IDataService} from '../../services/data.service';
 import {TERMINAL_FILTER_SERVICE} from '../../services/terminal-filter.service';
 import {ICoordinates, ITerminalFilterService, ITerminalInfo, ITerminalPrice} from '../types';
@@ -27,6 +27,7 @@ import {IViewUpdateService, VIEW_UPDATE_SERVICE} from '../../services/view-updat
 import {FIT_BOUNDS_SERVICE, IFitBoundsService} from '../../services/fitbounds.service';
 import {ISearchResult, IStateMapService, STATE_MAP_SERVICE} from '../../services/state-map.service';
 import {ITerminalsService, TERMINALS_SERVICE} from '../../services/terminals.service';
+import {GOOGLE_API_SERVICE, IGoogleApiService} from '../../services/google.service';
 
 
 /*
@@ -60,7 +61,7 @@ import {ITerminalsService, TERMINALS_SERVICE} from '../../services/terminals.ser
                           [agmFitBounds]="true"
                           (markerClick)="onMarkerClick(terminal)"
               >
-                  <agm-info-window (infoWindowClose)="onInfoWindowClose()" >
+                  <agm-info-window (infoWindowClose)="onInfoWindowClose()">
                       <terminal-info [terminal]="terminal"></terminal-info>
                   </agm-info-window>
               </agm-marker>
@@ -80,6 +81,7 @@ import {ITerminalsService, TERMINALS_SERVICE} from '../../services/terminals.ser
           >
 
           </agm-circle>
+
       </agm-map>
       <message-window></message-window>
   `,
@@ -103,6 +105,7 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
   private _map: GoogleMap;
 
   constructor(
+    @Inject(GOOGLE_API_SERVICE) public api: IGoogleApiService,
     @Inject(FIT_BOUNDS_SERVICE) public fitBounds: IFitBoundsService,
     @Inject(VIEW_UPDATE_SERVICE) private view: IViewUpdateService,
     @Inject(APP_CONFIG) private config: IAppConfig,
@@ -116,11 +119,13 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
 
   onMarkerClick(terminal: ITerminalInfo) {
     this.closeAllInfoWindows();
-    this.data.loadTerminalPrices('terminal_prices', terminal._id)
-      .subscribe((prices: ITerminalPrice[]) => {
-        this.state.setMap('displayTerminalInfo', true);
-        terminal.showPrice(prices);
-      });
+    this.state.markerClick(terminal);
+
+    // this.data.loadTerminalPrices('terminal_prices', terminal._id)
+    //   .subscribe((prices: ITerminalPrice[]) => {
+    //     this.state.setMap('displayTerminalInfo', true);
+    //     terminal.showPrice(prices);
+    //   });
   }
 
   onInfoWindowClose() {
@@ -130,7 +135,7 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
   onMapReady(map) {
 
     this._map = map;
-
+    this.api.mapReady(map);
     this._map.addListener('dragend', () => {
       // const coordinates: LatLng = this._map.getCenter();
       // this.state.setCoordinates({
