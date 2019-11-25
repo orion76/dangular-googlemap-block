@@ -9,7 +9,7 @@ import {Component, OnInit} from '@angular/core';
                     [ngStyle]="filtersDisplay?{'display':'none'}:null">
           </p-button>
           <ext-p-dialog header="Filters"
-                    [(visible)]="filtersDisplay"
+                    [(display)]="filtersDisplay"
                     closable="true"
                     draggable="true"
                     positionTop="0"

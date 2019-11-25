@@ -75,7 +75,7 @@ import {CommonModule} from '@angular/common';
 
 export class DialogFilterFormComponent extends Dialog implements OnDestroy, OnInit, AfterViewInit {
   @Input() display = true;
-
+  @Output() displayChange = new EventEmitter<boolean>();
   @Input() header: string;
 
   @Input() draggable = true;

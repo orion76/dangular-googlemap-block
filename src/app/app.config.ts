@@ -2,11 +2,13 @@ import {IDistanceUnits, IFilters} from './components/types';
 import {InjectionToken} from '@angular/core';
 import {MapTypeStyle} from '@agm/core';
 import {IStateMap} from './services/state-map.service';
+import {environment} from '../environments/environment';
 
 export const APP_CONFIG = new InjectionToken<IAppConfig>('APP_CONFIG');
 
 export interface IAppConfig {
   apiKeys: { [key: string]: string };
+  images_path: string;
   map: IStateMap;
   filtersDefault: IFilters;
   filtersInit: Partial<IFilters>;
@@ -19,6 +21,7 @@ export const appConfig: IAppConfig = {
   apiKeys: {
     google: 'AIzaSyAeK50XUYcxCwBDAEK0MAbTKi5zFpRhXqY'
   },
+  images_path: environment.production ? '/themes/custom/custom_bootstrap_sass/images' : 'assets/images',
   map: {zoom: 8, displayTerminalInfo: false},
   filtersDefault: {
     radius: {unit: 'mile', value: 10, min: 0, max: 100},

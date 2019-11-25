@@ -47,9 +47,9 @@ import {GOOGLE_API_SERVICE, IGoogleApiService} from '../../services/google.servi
                (mapReady)="onMapReady($event)"
       >
           <agm-marker-cluster
-                  imagePath="assets/images/m"
+                  [imagePath]="config.images_path + '/m'"
                   imageExtension="png"
-                  maxZoom="10"
+                  maxZoom="30"
           >
               <agm-marker *ngFor="let terminal of (searchResult$ | async).terminals"
                           [latitude]="terminal.latitude"
@@ -107,7 +107,7 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
     @Inject(GOOGLE_API_SERVICE) public api: IGoogleApiService,
     @Inject(FIT_BOUNDS_SERVICE) public fitBounds: IFitBoundsService,
     @Inject(VIEW_UPDATE_SERVICE) private view: IViewUpdateService,
-    @Inject(APP_CONFIG) private config: IAppConfig,
+    @Inject(APP_CONFIG) public config: IAppConfig,
     @Inject(DATA_SERVICE) private data: IDataService,
     @Inject(TERMINAL_FILTER_SERVICE) public service: ITerminalFilterService,
     @Inject(STATE_MAP_SERVICE) public state: IStateMapService,
