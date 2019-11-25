@@ -39,7 +39,7 @@ export interface ITerminalCoinPrice {
           <div class="info-row__label">{{rowOperations.label}}</div>
           <div class="info-row__value">{{createOperationsOutput(terminal)}}</div>
       </div>
-      <p-accordion class="'terminal-limits">
+      <p-accordion class="terminal-limits">
           <p-accordionTab header="Purchase Requirements">
               <terminal-limits *ngFor="let limit of terminal.limits" [limit]="limit"
                                [fiat]="terminal.currency.symbol"></terminal-limits>

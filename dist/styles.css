@@ -5755,6 +5755,9 @@ input[type=text]::-ms-clear {
   width: 100%;
   min-width: 100%;
 }
+.dialog__content .ui-dialog-content.ui-widget-content {
+  background-color: #fff;
+}
 .ui-accordion-header .coin-icon {
   display: inline-block;
   width: 1.6em;

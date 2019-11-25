@@ -51,10 +51,7 @@ export class GoogleApiService implements IGoogleApiService {
           placeId: results[0]['place_id'],
           fields: ['photo']
         };
-        debugger;
         service.getDetails(request, (result: any[], status: string) => {
-
-          debugger;
           subject.next(result);
         });
 

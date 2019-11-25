@@ -3,6 +3,12 @@
 @import "components/slide-checkbox";
 @import "components/dropdown";
 
+
+.dialog__content .ui-dialog-content.ui-widget-content {
+  background-color: #fff;
+}
+
+.ui-dialog-resizable .ui-dialog-content{}
 .ui-accordion-header{
   .coin-icon {
     display: inline-block;

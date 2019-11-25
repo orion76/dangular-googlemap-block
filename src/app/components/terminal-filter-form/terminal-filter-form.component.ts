@@ -176,7 +176,6 @@ export class TerminalFilterFormComponent implements OnInit {
 
 
   onAddressChanged(event) {
-    debugger;
     this.form.get('coordinates').patchValue({
       latitude: event.geometry.location.lat(),
       longitude: event.geometry.location.lng(),

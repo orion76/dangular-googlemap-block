@@ -35,7 +35,6 @@ import {GOOGLE_API_SERVICE, IGoogleApiService} from '../../services/google.servi
 @Component({
   selector: 'google-map',
   template: `
-      <!--           "-->
       <agm-map [latitude]="(state.coordinates|async).latitude"
                [longitude]="(state.coordinates|async).longitude"
                [zoom]="(state.map | async).zoom"
@@ -48,7 +47,7 @@ import {GOOGLE_API_SERVICE, IGoogleApiService} from '../../services/google.servi
                (mapReady)="onMapReady($event)"
       >
           <agm-marker-cluster
-                  imagePath="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m"
+                  imagePath="assets/images/m"
                   imageExtension="png"
                   maxZoom="10"
           >
