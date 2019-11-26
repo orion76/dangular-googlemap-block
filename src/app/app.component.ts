@@ -3,6 +3,7 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'app-coin-googlemap',
   template: `
+    <div style="height:300px"></div>
       <div class="map-block container-fluid">
           <google-map class="google-map map-block-item"></google-map>
           <p-button (onClick)="showFilters()" label="Filters" type="button"

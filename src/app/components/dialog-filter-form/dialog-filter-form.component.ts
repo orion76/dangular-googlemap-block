@@ -116,6 +116,13 @@ export class DialogFilterFormComponent extends Dialog implements OnDestroy, OnIn
 
   @Input() positionTop: number;
 
+  lastPageX: number;
+
+  lastPageY: number;
+  lastScrollX: number;
+  lastScrollY: number;
+  documentScrollListener: any;
+  documentMousemoveListener: any;
   containerStyle = {};
   public ngClass = {};
   collapseIcons = {
@@ -124,6 +131,7 @@ export class DialogFilterFormComponent extends Dialog implements OnDestroy, OnIn
   };
   collapseIcon: string;
   animating = false;
+  _style: any;
 
   constructor(public el: ElementRef, public renderer: Renderer2, public zone: NgZone, private cdr: ChangeDetectorRef) {
     super(el, renderer, zone);
@@ -134,6 +142,7 @@ export class DialogFilterFormComponent extends Dialog implements OnDestroy, OnIn
     this.setCollapseIcon(this.display);
     this.collapseIcon = this.collapseIcons.down;
     this.containerStyle = {top: this.positionTop, right: 0};
+    this._style = {left: 0, top: 0, height: 0, width: 0};
 
     this.ngClass = {
       'ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow': true,
@@ -149,16 +158,33 @@ export class DialogFilterFormComponent extends Dialog implements OnDestroy, OnIn
     event.stopPropagation();
   }
 
+  bindGlobalListeners() {
+    super.bindGlobalListeners();
+    this.bindDocumentScrollListener();
+    this.bindDocumentMousemoveListener();
+  }
+
+  unbindGlobalListeners() {
+    super.unbindGlobalListeners();
+    this.unbindDocumentScrollListener();
+    this.unbindDocumentMousemoveListener();
+  }
+
   ngAfterViewInit() {
 
+
     this.container = this.containerViewChild.nativeElement;
+    const offset = DomHandler.getOffset(this.el.nativeElement);
+
+    this.positionTop = Number(this.positionTop) + offset.top;
 
     this.container.style.top = this.positionTop + 'px';
     this.container.style.left = this.positionLeft + 'px';
 
-    this.appendContainer();
+
     this.moveOnTop();
     this.positionOverlay();
+
     this.bindGlobalListeners();
 
     if (this.maximized) {
@@ -178,6 +204,31 @@ export class DialogFilterFormComponent extends Dialog implements OnDestroy, OnIn
     }
 
 
+  }
+
+  positionOverlay() {
+
+    const viewport = DomHandler.getViewport();
+
+    const containerHeight = DomHandler.getOuterHeight(this.container);
+    const content = this.contentViewChild.nativeElement;
+
+    if (containerHeight + content.scrollHeight - content.clientHeight > viewport.height) {
+      content.style.height = (viewport.height * .75) + 'px';
+      this._style.height = 'auto';
+    } else {
+      content.style.height = null;
+    }
+
+    // if (this.positionLeft >= 0 && this.positionTop >= 0) {
+    this._style.left = this.positionLeft + 'px';
+    this._style.top = this.positionTop + 'px';
+    // } else if (this.positionTop >= 0) {
+    //   this.center();
+    //   this._style.top = this.positionTop + 'px';
+    // } else {
+    //   this.center();
+    // }
   }
 
   bindDocumentDragListener() {
@@ -201,6 +252,39 @@ export class DialogFilterFormComponent extends Dialog implements OnDestroy, OnIn
     });
   }
 
+  bindDocumentScrollListener() {
+    this.zone.runOutsideAngular(() => {
+      this.documentScrollListener = this.onScroll.bind(this);
+      window.addEventListener('scroll', this.documentScrollListener);
+    });
+  }
+
+  unbindDocumentScrollListener() {
+    if (this.documentScrollListener) {
+      window.document.removeEventListener('scroll', this.documentScrollListener);
+      this.documentDragListener = null;
+    }
+  }
+
+  bindDocumentMousemoveListener() {
+    this.zone.runOutsideAngular(() => {
+      this.documentMousemoveListener = this.onMouseMove.bind(this);
+      window.addEventListener('mousemove', this.documentMousemoveListener);
+    });
+  }
+
+  onMouseMove(event: MouseEvent) {
+// debugger;
+  }
+
+  unbindDocumentMousemoveListener() {
+    if (this.documentScrollListener) {
+      window.document.removeEventListener('mousemove', this.documentMousemoveListener);
+      this.documentMousemoveListener = null;
+    }
+  }
+
+
   unbindDocumentDragEndListener() {
     if (this.documentDragEndListener) {
       this.container.removeEventListener('mouseup', this.documentDragEndListener);
@@ -222,6 +306,24 @@ export class DialogFilterFormComponent extends Dialog implements OnDestroy, OnIn
     }
   }
 
+  onScroll(event: any) {
+    if (this.lastScrollX === undefined) {
+      this.lastScrollX = window.scrollX;
+      this.lastScrollY = window.scrollY;
+      return;
+    }
+    const deltaX = window.scrollX - this.lastScrollX;
+    const deltaY = window.scrollY - this.lastScrollY;
+
+    const offset = DomHandler.getOffset(this.container);
+
+    this.container.style.left = (offset.left - deltaX) + 'px';
+    this.container.style.top = (offset.top - deltaY) + 'px';
+
+    this.lastScrollX = window.scrollX;
+    this.lastScrollY = window.scrollY;
+  }
+
   onDrag(event: MouseEvent) {
     if (this.dragging) {
       const containerWidth = DomHandler.getOuterWidth(this.container);
@@ -233,11 +335,10 @@ export class DialogFilterFormComponent extends Dialog implements OnDestroy, OnIn
       const topPos = offset.top + deltaY;
       const viewport = DomHandler.getViewport();
 
-      if (leftPos >= this.minX) {
+      if (leftPos >= this.minX && (leftPos + containerWidth) < viewport.width) {
         this.container.style.left = leftPos + 'px';
       }
-
-      if (topPos >= this.minY) {
+      if (topPos >= this.minY && (topPos + containerHeight) < viewport.height) {
         this.container.style.top = topPos + 'px';
       }
 
@@ -245,6 +346,8 @@ export class DialogFilterFormComponent extends Dialog implements OnDestroy, OnIn
       this.lastPageY = event.pageY;
       event.stopPropagation();
       event.preventDefault();
+
+
     }
   }
 
