@@ -5755,8 +5755,39 @@ input[type=text]::-ms-clear {
   width: 100%;
   min-width: 100%;
 }
-.dialog__content .ui-dialog-content.ui-widget-content {
+.map-block {
+  position: relative;
+}
+.float-panel-wrapper {
+  position: absolute;
+}
+.float-panel {
+  padding: 0;
   background-color: #fff;
+}
+.float-panel .float-panel__titlebar {
+  padding: 0.5em 0.75em;
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  background-color: #59f;
+}
+.float-panel .float-panel__content {
+  position: relative;
+  border: 0;
+  padding: 0.5em 0.75em;
+  zoom: 1;
+}
+.float-panel .float-panel__titlebar-icon {
+  text-decoration: none;
+  float: right;
+  padding: 0.125em;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.float-panel .float-panel__titlebar-icon span {
+  display: block;
+  margin: 0;
 }
 .ui-accordion-header .coin-icon {
   display: inline-block;

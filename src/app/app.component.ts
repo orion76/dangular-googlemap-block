@@ -3,27 +3,27 @@ import {Component, OnInit} from '@angular/core';
 @Component({
   selector: 'app-coin-googlemap',
   template: `
-    <div style="height:300px"></div>
+<!--      <div style="height:300px"></div>-->
       <div class="map-block container-fluid">
           <google-map class="google-map map-block-item"></google-map>
           <p-button (onClick)="showFilters()" label="Filters" type="button"
                     [ngStyle]="filtersDisplay?{'display':'none'}:null">
           </p-button>
-          <ext-p-dialog header="Filters"
-                    [(display)]="filtersDisplay"
-                    closable="true"
-                    draggable="true"
-                    positionTop="0"
-                    [positionLeft]="positionLeft"
-                    [autoZIndex]="autoZIndex"
+          <float-panel class="float-panel-wrapper" header="Filters"
+                       [(expanded)]="filtersDisplay"
+                       closable="true"
+                       draggable="true"
+                       positionTop="0"
+                       [positionLeft]="positionLeft"
+                       [autoZIndex]="autoZIndex"
           >
               <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>
-          </ext-p-dialog>
-<!--          <p-accordion class="terminal-filter-form-wrapper" >-->
-<!--              <p-accordionTab header="Filters" [selected]="true">-->
-<!--                  <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>-->
-<!--              </p-accordionTab>-->
-<!--          </p-accordion>-->
+          </float-panel>
+          <!--          <p-accordion class="terminal-filter-form-wrapper" >-->
+          <!--              <p-accordionTab header="Filters" [selected]="true">-->
+          <!--                  <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>-->
+          <!--              </p-accordionTab>-->
+          <!--          </p-accordion>-->
       </div>
       <div class="legend block container">
           <div class="block-content legend__content">

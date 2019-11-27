@@ -2,19 +2,56 @@
 @import "components/legend";
 @import "components/slide-checkbox";
 @import "components/dropdown";
-
-
-.dialog__content .ui-dialog-content.ui-widget-content {
-  background-color: #fff;
+.map-block{
+  position: relative;
 }
 
-.ui-dialog-resizable .ui-dialog-content{}
-.ui-accordion-header{
+.float-panel-wrapper {
+  position: absolute;
+}
+
+.float-panel {
+
+  padding: 0;
+  background-color: #fff;
+  .float-panel__titlebar {
+    padding: 0.5em 0.75em;
+    position: relative;
+    border: 0;
+    cursor: pointer;
+    background-color: #59f;
+  }
+
+  .float-panel__content {
+
+    position: relative;
+    border: 0;
+    padding: .5em .75em;
+
+    zoom: 1;
+  }
+
+  .float-panel__titlebar-icon {
+    text-decoration: none;
+    float: right;
+    padding: .125em;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .float-panel__titlebar-icon span {
+    display: block;
+    margin: 0;
+  }
+}
+
+.ui-accordion-header {
   .coin-icon {
     display: inline-block;
     width: 1.6em;
   }
-  .coin-name{
+
+  .coin-name {
     display: inline-block;
     vertical-align: super;
     padding-left: .5em;
@@ -23,8 +60,7 @@
 }
 
 
-
-span.ui-slider-handle.ui-state-default.ui-corner-all.ui-clickable.ng-star-inserted{
+span.ui-slider-handle.ui-state-default.ui-corner-all.ui-clickable.ng-star-inserted {
   background-color: #79f;
   border: 1px solid #57a;
 }
@@ -57,11 +93,11 @@ agm-map {
   height: 80vh;
 }
 
-.google-map{
+.google-map {
 
 }
 
-.terminal-coin-prices{
+.terminal-coin-prices {
   .info-row {
     display: grid;
     grid-template-columns: 12em 16em;
@@ -73,7 +109,7 @@ agm-map {
 
 }
 
-terminal-info{
+terminal-info {
   .info-row {
     display: grid;
     grid-template-columns: 12em 16em;
@@ -85,7 +121,7 @@ terminal-info{
 
 }
 
-.terminal-limits{
+.terminal-limits {
   .info-row {
     display: grid;
     grid-template-columns: 12em 16em;
@@ -172,7 +208,6 @@ terminal-info{
 
 
 @media (max-width: 979px) {
-
 
 
   .ui-dropdown-items-wrapper {
@@ -355,6 +390,7 @@ terminal-info {
     margin: 0
   }
 }
+
 .ui-dialog {
   background-color: #fff;
 }

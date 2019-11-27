@@ -23,7 +23,7 @@ import {SEARCH_HISTORY_SERVICE, SearchHistoryService} from './services/search-hi
 import {TERMINALS_SERVICE, TerminalsService} from './services/terminals.service';
 import {GOOGLE_API_SERVICE, GoogleApiService} from './services/google.service';
 import {AccordionModule} from 'primeng/accordion';
-import {DialogFilterFormModule} from './components/dialog-filter-form/dialog-filter-form.component';
+import {FloatPanelModule} from './components/dialog-filter-form/float-panel.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import {DialogFilterFormModule} from './components/dialog-filter-form/dialog-fil
     DialogModule,
     ButtonModule,
     AccordionModule,
-    DialogFilterFormModule
+    FloatPanelModule
   ],
   providers: [
 
