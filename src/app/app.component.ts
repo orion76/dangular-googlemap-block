@@ -6,15 +6,10 @@ import {Component, OnInit} from '@angular/core';
 <!--      <div style="height:300px"></div>-->
       <div class="map-block container-fluid">
           <google-map class="google-map map-block-item"></google-map>
-          <p-button (onClick)="showFilters()" label="Filters" type="button"
-                    [ngStyle]="filtersDisplay?{'display':'none'}:null">
-          </p-button>
+
           <float-panel class="float-panel-wrapper" header="Filters"
-                       [(expanded)]="filtersDisplay"
-                       closable="true"
+                       expanded="true"
                        draggable="true"
-                       positionTop="0"
-                       [positionLeft]="positionLeft"
                        [autoZIndex]="autoZIndex"
           >
               <terminal-filter-form class="terminal-filter-form map-block-item"></terminal-filter-form>
@@ -48,14 +43,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'app';
-  filtersDisplay = true;
-  positionLeft = window.innerWidth * .75;
+
   autoZIndex = false;
 
   ngOnInit() {
   }
 
-  showFilters() {
-    this.filtersDisplay = true;
-  }
 }
