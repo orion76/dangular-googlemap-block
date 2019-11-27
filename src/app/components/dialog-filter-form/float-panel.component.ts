@@ -91,8 +91,6 @@ export class FloatPanelComponent implements OnDestroy, OnInit, AfterViewInit {
   @Input() contentStyle: any;
   @Input() draggable = true;
 
-  @Input() responsive = true;
-
   @Input() autoZIndex = true;
   @Input() transitionOptions = '400ms cubic-bezier(0.86, 0, 0.07, 1)';
   id = `ui-dialog-${idx++}`;
@@ -179,43 +177,10 @@ export class FloatPanelComponent implements OnDestroy, OnInit, AfterViewInit {
       this.bindEvent('mouseup', this.endDrag, this.titlebar);
       this.bindEvent('mouseout', this.onMouseOut, this.container);
     }
-
-    if (this.responsive) {
-      this.bindEvent('resize', this.onWindowResize, window);
-    }
   }
 
   onMouseOut(event: MouseEvent) {
     this.dragging = false;
-  }
-
-  onWindowResize() {
-
-
-    const viewport = DomHandler.getViewport();
-    if (viewport.width <= this.breakpoint) {
-      if (!this.preWidth) {
-        this.preWidth = this._style.width;
-      }
-
-      this._style.left = '0px';
-      this._style.width = '100%';
-
-      // outside zone
-      this.container.style.left = this._style.left;
-      this.container.style.width = this._style.width;
-    } else {
-      if (this.preWidth) {
-        this._style.width = this.preWidth;
-      }
-
-      // outside zone
-      this.container.style.left = this._style.left;
-      this.container.style.top = this._style.top;
-      this.container.style.width = this._style.width;
-
-      this.positionOverlay();
-    }
   }
 
   ngAfterViewInit() {
