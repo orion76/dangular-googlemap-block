@@ -40,7 +40,7 @@ interface IEvents {
 @Component({
   selector: 'float-panel',
   template: `
-      <div #container class="float-panel__container" style="position:absolute" (dragstart)="stopDrag($event)">
+      <div #container class="float-panel__container" (dragstart)="stopDrag($event)">
           <div [ngClass]="ngClass">
               <div #titlebar
                    class="float-panel__titlebar float-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"
