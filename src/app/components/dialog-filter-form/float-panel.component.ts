@@ -115,7 +115,7 @@ export class FloatPanelComponent implements OnDestroy, OnInit, AfterViewInit {
   positionTop: number;
   titlebar: HTMLDivElement;
   container: HTMLDivElement;
-  wrapper: HTMLDivElement;
+  @Input() wrapper: HTMLDivElement;
   lastMouseLeft: number;
 
   lastMouseTop: number;
@@ -132,8 +132,6 @@ export class FloatPanelComponent implements OnDestroy, OnInit, AfterViewInit {
   preWidth: string;
   @Input() baseZIndex = 0;
   @Input() focusOnShow = true;
-  documentDragListener: any;
-  documentDragEndListener: any;
   dragging: boolean;
   @Input() minX = 0;
   @Input() minY = 0;
@@ -228,8 +226,9 @@ export class FloatPanelComponent implements OnDestroy, OnInit, AfterViewInit {
   ngAfterViewInit() {
 
 
-    this.container = this.containerViewChild.nativeElement;
-    this.wrapper = this.el.nativeElement;
+    // this.container = this.containerViewChild.nativeElement;
+    // this.wrapper = this.el.nativeElement;
+    this.container = this.el.nativeElement;
     this.titlebar = this.titlebarViewChild.nativeElement;
 
     this.moveOnTop();

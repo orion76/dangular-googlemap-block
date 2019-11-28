@@ -65,8 +65,8 @@ export class DataService implements IDataService {
 
     this.addCoordinateParams(params, filters);
     this.addActionParams(params, filters);
-    // return of([]);
-    return this.http.get(this.createUrl(config.entrypoint), {params});
+    return of([]);
+    // return this.http.get(this.createUrl(config.entrypoint), {params});
   }
 
 
