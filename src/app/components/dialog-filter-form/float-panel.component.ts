@@ -46,7 +46,6 @@ interface IEvents {
                    class="float-panel__titlebar float-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"
                    (mousedown)="initDrag($event)">
                   <span [attr.id]="id + '-label'" class="ui-dialog-title">{{header}}</span>
-                  <span [attr.id]="id + '-label'" class="ui-dialog-title">
                     <ng-content select="p-header"></ng-content>
                 </span>
                   <a [ngClass]="{'float-panel__titlebar-icon ui-corner-all':true}"
