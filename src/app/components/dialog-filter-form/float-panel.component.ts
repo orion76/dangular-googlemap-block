@@ -40,28 +40,29 @@ interface IEvents {
 @Component({
   selector: 'float-panel',
   template: `
-      <div #container class="float-panel__container" (dragstart)="stopDrag($event)">
-          <div [ngClass]="ngClass">
-              <div #titlebar
-                   class="float-panel__titlebar float-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"
-                   (mousedown)="initDrag($event)">
-                  <span [attr.id]="id + '-label'" class="ui-dialog-title">{{header}}</span>
-                  <a [ngClass]="{'float-panel__titlebar-icon ui-corner-all':true}"
-                     tabindex="0" role="button" (click)="toggle($event)" (keydown.enter)="toggle($event)">
+    <div #container class="float-panel__container" (dragstart)="stopDrag($event)">
+      <div [ngClass]="ngClass">
+        <div #titlebar
+             class="float-panel__titlebar float-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-top"
+             (mousedown)="initDrag($event)">
+          <span [attr.id]="id + '-label'" class="ui-dialog-title">{{header}}</span>
+          <a [ngClass]="{'float-panel__titlebar-icon ui-corner-all':true}"
+             tabindex="0" role="button" (click)="toggle($event)" (keydown.enter)="toggle($event)">
 
-                      <span [class]="collapseIcon"></span>
-                  </a>
-              </div>
-              <div class="float-panel__content ui-widget-content"
-                   [@tabContent]="getTabContent()"
-                   (@tabContent.done)="onToggleDone($event)"
-              >
-                  <div #content class="" [ngStyle]="contentStyle">
-                      <ng-content></ng-content>
-                  </div>
-              </div>
-          </div>
+            <span [class]="collapseIcon"></span>
+          </a>
+        </div>
+        <div #content class="float-panel__content ui-widget-content"
+             [ngStyle]="contentStyle"
+             [@tabContent]="getTabContent()"
+             (@tabContent.done)="onToggleDone($event)"
+        >
+
+          <ng-content></ng-content>
+
+        </div>
       </div>
+    </div>
   `,
   animations: [
     trigger('tabContent', [
